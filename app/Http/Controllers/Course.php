@@ -17,7 +17,7 @@ class Course extends Controller
 
     public function index()
     {
-        $params['course'] = Cource::all();
+        $params['courses'] = Cource::all();
         return view('main', $params);
     }
 }

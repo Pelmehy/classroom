@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\Course::class, 'index']
 )->name('main');
 
+Route::get('/posts', [\App\Http\Controllers\Posts::class, 'index']
+)->name('posts');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

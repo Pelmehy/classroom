@@ -16,6 +16,7 @@ class CreateCourcesTable extends Migration
         Schema::create('cources', function (Blueprint $table) {
             $table->id();
             $table->integer('teacher_id');
+            $table->integer('group_id');
             $table->string('name');
             $table->text('description');
             $table->text('img');

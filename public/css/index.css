@@ -448,6 +448,11 @@ select {
     margin-top: 20px;
 }
 
+.container .col{
+    min-width: 350px;
+    margin: 15px;
+}
+
 .card {
     width: 350px;
     background-color: #efefef;
@@ -468,10 +473,10 @@ select {
     width: 100%;
     align-content: center;
 }
-.btn {
-    /*height: 60px;*/
-    border-radius: 50%;
-}
+/*.btn {*/
+/*    !*height: 60px;*!*/
+/*    border-radius: 50%;*/
+/*}*/
 
 .name {
     font-size: 22px;
