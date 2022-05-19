@@ -17,12 +17,14 @@
 .ico{
     width: 52px;
     height: 52px;
+    margin-bottom: 10px;
 
     background: #FFFFFF;
     border-radius: 15px;
 }
 
 .tasks p{
+    text-decoration: none;
     display: flex;
     flex-direction: row;
     margin: 5px;

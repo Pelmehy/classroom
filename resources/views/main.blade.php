@@ -16,7 +16,7 @@
                         <div class="card-body">
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             <div class="d-flex justify-content-between align-items-center">
-                                <a href="" class="btn btn-outline-secondary">відкрити курс</a>
+                                <a href="{{route('currentCourse', 1)}}" class="btn btn-outline-secondary">відкрити курс</a>
                             </div>
                         </div>
                     </div>

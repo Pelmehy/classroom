@@ -13,11 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\Course::class, 'index']
+Route::get('/',
+    [\App\Http\Controllers\Course::class, 'index']
 )->name('main');
 
-Route::get('/posts', [\App\Http\Controllers\Posts::class, 'index']
+Route::get(
+    '/posts',
+    [\App\Http\Controllers\Posts::class, 'index']
 )->name('posts');
+
+Route::get(
+    '/course/{course_id}',
+    [\App\Http\Controllers\CourseController::class, 'index']
+)->name('currentCourse');
+
+Route::get(
+    '/task/{course_id}/{task_id}',
+    [\App\Http\Controllers\TaskController::class, 'index']
+)->name('task');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
