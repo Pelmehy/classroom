@@ -1,0 +1,1082 @@
+/* This source code is exported from pxCode, you can get more document from https://www.pxcode.io */
+@import "utils";
+
+$font_type0: 16px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type1: 18px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type2: 20px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type3: 24px/1.2 "Inter", Helvetica, Arial, serif;
+
+.new-teacher- {
+    &block {
+        @include flex-column;
+        background-color: rgb(255, 255, 255);
+    }
+    &block.layout {
+        position: relative;
+        overflow: hidden;
+        min-height: 1025px;
+        flex-shrink: 0;
+    }
+    &block1 {
+        @include flex-column;
+        background-color: rgb(68, 68, 68);
+        border-radius: 0px 0px 5px 5px;
+    }
+    &block1.layout {
+        position: relative;
+        height: min-content;
+        margin: 0px 1px 0px 2px;
+        @include lg {
+            margin: 0px 5px;
+        }
+    }
+    &block2 {
+        display: flex;
+        @include sm {
+            flex-wrap: wrap;
+            row-gap: 16px;
+        }
+    }
+    &block2.layout {
+        position: relative;
+        height: min-content;
+        margin: 9px 0px;
+        @include lg {
+            margin: 8px 0px;
+        }
+        @include md {
+            margin: 7px 0px;
+        }
+        @include sm {
+            margin: 6px 0px;
+        }
+        @include xs {
+            margin: 5px 0px;
+        }
+    }
+    &block2-item {
+        @include flex-column;
+        position: relative;
+        flex: 1 1 338px;
+        @include sm {
+            flex: 0 0 100%;
+        }
+    }
+    &block3 {
+        display: flex;
+    }
+    &block3.layout {
+        position: relative;
+        height: min-content;
+    }
+    &highlights {
+        @include v-center-content;
+        justify-content: center;
+        font: $font_type0;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        letter-spacing: 0px;
+        @include lg {
+            font-size: 15px;
+            text-align: center;
+        }
+        @include md {
+            font-size: 14px;
+        }
+        @include sm {
+            font-size: 13px;
+        }
+        @include xxs {
+            font-size: 12px;
+        }
+    }
+    &highlights.layout {
+        position: relative;
+        flex: 0 0 auto;
+        height: min-content;
+        margin: 8px 0px 8px 8px;
+        @include lg {
+            margin: 7px 0px 7px 7px;
+        }
+        @include md {
+            margin: 6px 0px 6px 6px;
+        }
+        @include sm {
+            margin: 5px 0px 5px 5px;
+        }
+    }
+    &block3-spacer {
+        flex: 0 1 19px;
+    }
+    &highlights.layout1 {
+        position: relative;
+        flex: 0 0 auto;
+        height: min-content;
+        margin: 8px 11px 8px 0px;
+        @include lg {
+            margin: 7px 10px 7px 0px;
+        }
+        @include md {
+            margin: 6px 8px 6px 0px;
+        }
+        @include sm {
+            margin: 5px 7px 5px 0px;
+        }
+        @include xs {
+            margin: 5px 6px 5px 0px;
+        }
+        @include tn {
+            margin: 5px 5px 5px 0px;
+        }
+    }
+    &block2-spacer {
+        flex: 0 1 602px;
+        @include sm {
+            display: none;
+        }
+    }
+    &block2-item1 {
+        @include flex-column;
+        position: relative;
+        flex: 1 1 497px;
+        @include sm {
+            flex: 0 0 100%;
+        }
+    }
+    &block4 {
+        display: flex;
+    }
+    &block4.layout {
+        position: relative;
+        height: min-content;
+    }
+    &highlights.layout2 {
+        position: relative;
+        flex: 0 0 auto;
+        height: min-content;
+        margin: 8px 0px 8px 59px;
+        @include lg {
+            margin: 7px 0px 7px 50px;
+        }
+        @include md {
+            margin: 6px 0px 6px 41px;
+        }
+        @include sm {
+            margin: 5px 0px 5px 33px;
+        }
+        @include xs {
+            margin: 5px 0px 5px 29px;
+        }
+        @include xxs {
+            margin: 5px 0px 5px 26px;
+        }
+        @include tn {
+            margin: 5px 0px 5px 23px;
+        }
+    }
+    &block4-spacer {
+        flex: 0 1 98px;
+    }
+    &highlights.layout3 {
+        position: relative;
+        flex: 0 0 auto;
+        height: min-content;
+        margin: 8px 0px;
+        @include lg {
+            margin: 7px 0px;
+        }
+        @include md {
+            margin: 6px 0px;
+        }
+        @include sm {
+            margin: 5px 0px;
+        }
+    }
+    &block4-spacer1 {
+        flex: 0 1 94.5px;
+    }
+    &highlights.layout4 {
+        position: relative;
+        flex: 0 0 auto;
+        height: min-content;
+        margin: 8px 55.5px 8px 0px;
+        @include lg {
+            margin: 7px 47px 7px 0px;
+        }
+        @include md {
+            margin: 6px 39px 6px 0px;
+        }
+        @include sm {
+            margin: 5px 31px 5px 0px;
+        }
+        @include xs {
+            margin: 5px 27px 5px 0px;
+        }
+        @include xxs {
+            margin: 5px 24px 5px 0px;
+        }
+        @include tn {
+            margin: 5px 21px 5px 0px;
+        }
+    }
+    &block5 {
+        @include flex-column;
+    }
+    &block5.layout {
+        position: relative;
+        height: min-content;
+        width: 91.46%;
+        margin: 102px auto 0px;
+        @include lg {
+            margin: 84px auto 0px;
+        }
+        @include md {
+            margin: 65px auto 0px;
+        }
+        @include sm {
+            margin: 49px auto 0px;
+        }
+        @include xs {
+            margin: 40px auto 0px;
+        }
+        @include xxs {
+            margin: 32px auto 0px;
+        }
+        @include tn {
+            margin: 27px auto 0px;
+        }
+    }
+    &highlights1 {
+        display: flex;
+        justify-content: flex-end;
+        font: $font_type1;
+        color: rgb(0, 0, 0);
+        text-align: right;
+        letter-spacing: 0px;
+        @include lg {
+            font-size: 17px;
+            text-align: right;
+        }
+        @include md {
+            font-size: 16px;
+        }
+        @include sm {
+            font-size: 15px;
+        }
+        @include xxs {
+            font-size: 14px;
+        }
+    }
+    &highlights1.layout {
+        position: relative;
+        height: min-content;
+        width: 11.77%;
+        margin: 0px auto;
+    }
+    &line {
+        background-color: rgb(229, 229, 229);
+    }
+    &line.layout {
+        position: relative;
+        height: 2px;
+        margin: 38px 0px 0px;
+        @include lg {
+            margin: 33px 0px 0px;
+        }
+        @include md {
+            margin: 27px 0px 0px;
+        }
+        @include sm {
+            margin: 23px 0px 0px;
+        }
+        @include xs {
+            margin: 20px 0px 0px;
+        }
+        @include xxs {
+            margin: 18px 0px 0px;
+        }
+        @include tn {
+            margin: 16px 0px 0px;
+        }
+    }
+    &block6 {
+        @include flex-column;
+    }
+    &block6.layout {
+        position: relative;
+        height: min-content;
+        width: 91.46%;
+        margin: 102px auto 0px;
+        @include lg {
+            margin: 84px auto 0px;
+        }
+        @include md {
+            margin: 65px auto 0px;
+        }
+        @include sm {
+            margin: 49px auto 0px;
+        }
+        @include xs {
+            margin: 40px auto 0px;
+        }
+        @include xxs {
+            margin: 32px auto 0px;
+        }
+        @include tn {
+            margin: 27px auto 0px;
+        }
+    }
+    &block7 {
+        display: flex;
+        @include xl {
+            flex-wrap: wrap;
+            row-gap: 16px;
+        }
+    }
+    &block7.layout {
+        position: relative;
+        height: min-content;
+    }
+    &block7-item {
+        @include flex-column;
+        position: relative;
+        flex: 1 1 645px;
+        @include xl {
+            flex: 0 0 100%;
+        }
+    }
+    &block8 {
+        @include flex-column;
+    }
+    &block8.layout {
+        position: relative;
+        height: min-content;
+    }
+    &block9 {
+        @include flex-column;
+    }
+    &block9.layout {
+        position: relative;
+        height: min-content;
+        width: 93.64%;
+        margin: 0px 6.36% 0px 0%;
+    }
+    &block10 {
+        display: flex;
+    }
+    &block10.layout {
+        position: relative;
+        height: min-content;
+    }
+    &block10-item {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 274px;
+    }
+    &block11 {
+        @include flex-column;
+    }
+    &block11.layout {
+        position: relative;
+        height: min-content;
+    }
+    &highlights11 {
+        @include font-face($font_type1, rgb(0, 0, 0), 0px);
+        @include lg {
+            font-size: 17px;
+            text-align: left;
+        }
+        @include md {
+            font-size: 16px;
+        }
+        @include sm {
+            font-size: 15px;
+        }
+        @include xxs {
+            font-size: 14px;
+        }
+    }
+    &highlights11.layout {
+        position: relative;
+        height: min-content;
+    }
+    &box {
+        border: 2px solid rgb(229, 229, 229);
+        border-radius: 7px 7px 7px 7px;
+    }
+    &box.layout {
+        position: relative;
+        height: 35px;
+        margin: 15px 0px 0px;
+        @include lg {
+            margin: 13px 0px 0px;
+        }
+        @include md {
+            margin: 11px 0px 0px;
+        }
+        @include sm {
+            margin: 9px 0px 0px;
+        }
+        @include xxs {
+            margin: 8px 0px 0px;
+        }
+        @include tn {
+            margin: 7px 0px 0px;
+        }
+    }
+    &block10-spacer {
+        flex: 0 1 11px;
+    }
+    &block10-item1 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 319px;
+    }
+    &block12 {
+        @include flex-column;
+    }
+    &block12.layout {
+        position: relative;
+        height: min-content;
+        margin: 0px 0px 2px;
+        @include lg {
+            margin: 0px 0px 5px;
+        }
+    }
+    &highlights12 {
+        @include font-face($font_type1, rgb(0, 0, 0), 0px);
+        @include lg {
+            font-size: 17px;
+            text-align: left;
+        }
+        @include md {
+            font-size: 16px;
+        }
+        @include sm {
+            font-size: 15px;
+        }
+        @include xxs {
+            font-size: 14px;
+        }
+    }
+    &highlights12.layout {
+        position: relative;
+        height: min-content;
+    }
+    &box1 {
+        border: 2px solid rgb(229, 229, 229);
+        border-radius: 7px 7px 7px 7px;
+    }
+    &box1.layout {
+        position: relative;
+        height: 35px;
+        margin: 13px 0px 0px;
+        @include lg {
+            margin: 11px 0px 0px;
+        }
+        @include md {
+            margin: 10px 0px 0px;
+        }
+        @include sm {
+            margin: 8px 0px 0px;
+        }
+        @include xs {
+            margin: 7px 0px 0px;
+        }
+        @include tn {
+            margin: 6px 0px 0px;
+        }
+    }
+    &block13 {
+        @include flex-column;
+    }
+    &block13.layout {
+        position: relative;
+        height: min-content;
+        width: 45.03%;
+        margin: 22px 54.97% 0px 0%;
+        @include lg {
+            margin: 19px 54.97% 0px 0%;
+        }
+        @include md {
+            margin: 16px 54.97% 0px 0%;
+        }
+        @include sm {
+            margin: 14px 54.97% 0px 0%;
+        }
+        @include xs {
+            margin: 13px 54.97% 0px 0%;
+        }
+        @include xxs {
+            margin: 11px 54.97% 0px 0%;
+        }
+        @include tn {
+            margin: 10px 54.97% 0px 0%;
+        }
+    }
+    &highlights13 {
+        @include font-face($font_type1, rgb(0, 0, 0), 0px);
+        @include lg {
+            font-size: 17px;
+            text-align: left;
+        }
+        @include md {
+            font-size: 16px;
+        }
+        @include sm {
+            font-size: 15px;
+        }
+        @include xxs {
+            font-size: 14px;
+        }
+    }
+    &highlights13.layout {
+        position: relative;
+        height: min-content;
+    }
+    &box2 {
+        border: 2px solid rgb(229, 229, 229);
+        border-radius: 7px 7px 7px 7px;
+    }
+    &box2.layout {
+        position: relative;
+        height: 35px;
+        margin: 12px 0px 0px;
+        @include lg {
+            margin: 11px 0px 0px;
+        }
+        @include md {
+            margin: 9px 0px 0px;
+        }
+        @include sm {
+            margin: 8px 0px 0px;
+        }
+        @include xs {
+            margin: 7px 0px 0px;
+        }
+        @include xxs {
+            margin: 6px 0px 0px;
+        }
+    }
+    &block14 {
+        @include flex-column;
+    }
+    &block14.layout {
+        position: relative;
+        height: min-content;
+        margin: 30px 0px 0px;
+        @include lg {
+            margin: 26px 0px 0px;
+        }
+        @include md {
+            margin: 22px 0px 0px;
+        }
+        @include sm {
+            margin: 19px 0px 0px;
+        }
+        @include xs {
+            margin: 17px 0px 0px;
+        }
+        @include xxs {
+            margin: 15px 0px 0px;
+        }
+        @include tn {
+            margin: 14px 0px 0px;
+        }
+    }
+    &highlights14 {
+        @include font-face($font_type1, rgb(0, 0, 0), 0px);
+        @include lg {
+            font-size: 17px;
+            text-align: left;
+        }
+        @include md {
+            font-size: 16px;
+        }
+        @include sm {
+            font-size: 15px;
+        }
+        @include xxs {
+            font-size: 14px;
+        }
+    }
+    &highlights14.layout {
+        position: relative;
+        height: min-content;
+    }
+    &box3 {
+        border: 2px solid rgb(229, 229, 229);
+        border-radius: 7px 7px 7px 7px;
+    }
+    &box3.layout {
+        position: relative;
+        height: 35px;
+        margin: 12px 0px 0px;
+        @include lg {
+            margin: 11px 0px 0px;
+        }
+        @include md {
+            margin: 9px 0px 0px;
+        }
+        @include sm {
+            margin: 8px 0px 0px;
+        }
+        @include xs {
+            margin: 7px 0px 0px;
+        }
+        @include xxs {
+            margin: 6px 0px 0px;
+        }
+    }
+    &highlights15 {
+        @include font-face($font_type1, rgb(0, 0, 0), 0px);
+        @include lg {
+            font-size: 17px;
+            text-align: left;
+        }
+        @include md {
+            font-size: 16px;
+        }
+        @include sm {
+            font-size: 15px;
+        }
+        @include xxs {
+            font-size: 14px;
+        }
+    }
+    &highlights15.layout {
+        position: relative;
+        height: min-content;
+    }
+    &block7-spacer {
+        flex: 0 1 27px;
+        @include xl {
+            display: none;
+        }
+    }
+    &block15 {
+        @include flex-column;
+    }
+    &block15.layout {
+        position: relative;
+        height: min-content;
+        margin: 0px 0px 37px;
+        @include lg {
+            margin: 0px 0px 32px;
+        }
+        @include md {
+            margin: 0px 0px 27px;
+        }
+        @include sm {
+            margin: 0px 0px 22px;
+        }
+        @include xs {
+            margin: 0px 0px 20px;
+        }
+        @include xxs {
+            margin: 0px 0px 18px;
+        }
+        @include tn {
+            margin: 0px 0px 16px;
+        }
+    }
+    &block16 {
+        display: flex;
+    }
+    &block16.layout {
+        position: relative;
+        height: min-content;
+    }
+    &block16-item {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 360px;
+    }
+    &block17 {
+        @include flex-column;
+    }
+    &block17.layout {
+        position: relative;
+        height: min-content;
+    }
+    &highlights16 {
+        @include font-face($font_type1, rgb(0, 0, 0), 0px);
+        @include lg {
+            font-size: 17px;
+            text-align: left;
+        }
+        @include md {
+            font-size: 16px;
+        }
+        @include sm {
+            font-size: 15px;
+        }
+        @include xxs {
+            font-size: 14px;
+        }
+    }
+    &highlights16.layout {
+        position: relative;
+        height: min-content;
+    }
+    &box4 {
+        border: 2px solid rgb(229, 229, 229);
+        border-radius: 7px 7px 7px 7px;
+    }
+    &box4.layout {
+        position: relative;
+        height: 35px;
+        margin: 12px 0px 0px;
+        @include lg {
+            margin: 11px 0px 0px;
+        }
+        @include md {
+            margin: 9px 0px 0px;
+        }
+        @include sm {
+            margin: 8px 0px 0px;
+        }
+        @include xs {
+            margin: 7px 0px 0px;
+        }
+        @include xxs {
+            margin: 6px 0px 0px;
+        }
+    }
+    &block16-spacer {
+        flex: 0 1 20px;
+    }
+    &block16-item1 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 265px;
+    }
+    &block18 {
+        @include flex-column;
+    }
+    &block18.layout {
+        position: relative;
+        height: min-content;
+    }
+    &highlights17 {
+        @include font-face($font_type1, rgb(0, 0, 0), 0px);
+        @include lg {
+            font-size: 17px;
+            text-align: left;
+        }
+        @include md {
+            font-size: 16px;
+        }
+        @include sm {
+            font-size: 15px;
+        }
+        @include xxs {
+            font-size: 14px;
+        }
+    }
+    &highlights17.layout {
+        position: relative;
+        height: min-content;
+    }
+    &box5 {
+        border: 2px solid rgb(229, 229, 229);
+        border-radius: 7px 7px 7px 7px;
+    }
+    &box5.layout {
+        position: relative;
+        height: 35px;
+        margin: 12px 0px 0px;
+        @include lg {
+            margin: 11px 0px 0px;
+        }
+        @include md {
+            margin: 9px 0px 0px;
+        }
+        @include sm {
+            margin: 8px 0px 0px;
+        }
+        @include xs {
+            margin: 7px 0px 0px;
+        }
+        @include xxs {
+            margin: 6px 0px 0px;
+        }
+    }
+    &block19 {
+        @include flex-column;
+    }
+    &block19.layout {
+        position: relative;
+        height: min-content;
+        margin: 26px 0px 0px;
+        @include lg {
+            margin: 23px 0px 0px;
+        }
+        @include md {
+            margin: 19px 0px 0px;
+        }
+        @include sm {
+            margin: 16px 0px 0px;
+        }
+        @include xs {
+            margin: 15px 0px 0px;
+        }
+        @include xxs {
+            margin: 13px 0px 0px;
+        }
+        @include tn {
+            margin: 12px 0px 0px;
+        }
+    }
+    &highlights18 {
+        @include font-face($font_type1, rgb(0, 0, 0), 0px);
+        @include lg {
+            font-size: 17px;
+            text-align: left;
+        }
+        @include md {
+            font-size: 16px;
+        }
+        @include sm {
+            font-size: 15px;
+        }
+        @include xxs {
+            font-size: 14px;
+        }
+    }
+    &highlights18.layout {
+        position: relative;
+        height: min-content;
+    }
+    &box3.layout1 {
+        position: relative;
+        height: 35px;
+        margin: 17px 0px 0px;
+        @include lg {
+            margin: 15px 0px 0px;
+        }
+        @include md {
+            margin: 13px 0px 0px;
+        }
+        @include sm {
+            margin: 11px 0px 0px;
+        }
+        @include xs {
+            margin: 10px 0px 0px;
+        }
+        @include xxs {
+            margin: 9px 0px 0px;
+        }
+        @include tn {
+            margin: 8px 0px 0px;
+        }
+    }
+    &block20 {
+        @include flex-column;
+    }
+    &block20.layout {
+        position: relative;
+        height: min-content;
+        margin: 26px 0px 0px;
+        @include lg {
+            margin: 23px 0px 0px;
+        }
+        @include md {
+            margin: 19px 0px 0px;
+        }
+        @include sm {
+            margin: 16px 0px 0px;
+        }
+        @include xs {
+            margin: 15px 0px 0px;
+        }
+        @include xxs {
+            margin: 13px 0px 0px;
+        }
+        @include tn {
+            margin: 12px 0px 0px;
+        }
+    }
+    &block21 {
+        @include flex-column;
+    }
+    &block21.layout {
+        position: relative;
+        height: min-content;
+    }
+    &highlights19 {
+        @include font-face($font_type1, rgb(0, 0, 0), 0px);
+        @include lg {
+            font-size: 17px;
+            text-align: left;
+        }
+        @include md {
+            font-size: 16px;
+        }
+        @include sm {
+            font-size: 15px;
+        }
+        @include xxs {
+            font-size: 14px;
+        }
+    }
+    &highlights19.layout {
+        position: relative;
+        height: min-content;
+        margin: 0px 8px;
+        @include lg {
+            margin: 0px 7px;
+        }
+        @include md {
+            margin: 0px 6px;
+        }
+        @include sm {
+            margin: 0px 5px;
+        }
+    }
+    &block20-item {
+        @include flex-column;
+        position: relative;
+    }
+    &block22 {
+        @include flex-column;
+        background-color: rgb(98, 148, 80);
+        border-radius: 10px 10px 10px 10px;
+    }
+    &block22.layout {
+        position: relative;
+        height: 35px;
+        width: 38.14%;
+        margin: 25px 61.86% 0px 0%;
+        @include lg {
+            margin: 22px 61.86% 0px 0%;
+        }
+        @include md {
+            margin: 19px 61.86% 0px 0%;
+        }
+        @include sm {
+            margin: 16px 61.86% 0px 0%;
+        }
+        @include xs {
+            margin: 14px 61.86% 0px 0%;
+        }
+        @include xxs {
+            margin: 13px 61.86% 0px 0%;
+        }
+        @include tn {
+            margin: 12px 61.86% 0px 0%;
+        }
+    }
+    &subtitle {
+        @include v-center-content;
+        justify-content: center;
+        font: $font_type2;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        letter-spacing: 0px;
+        width: 100%;
+        height: 100%;
+        @include lg {
+            font-size: 19px;
+            text-align: center;
+        }
+        @include md {
+            font-size: 18px;
+        }
+        @include sm {
+            font-size: 17px;
+        }
+        @include xxs {
+            font-size: 16px;
+        }
+    }
+    &block6-item {
+        @include flex-column;
+        position: relative;
+    }
+    &block23 {
+        @include flex-column;
+        background-color: rgb(68, 68, 68);
+        border-radius: 10px 10px 10px 10px;
+    }
+    &block23.layout {
+        position: relative;
+        height: 50px;
+        width: 22.32%;
+        margin: 129px auto 0px;
+        @include lg {
+            margin: 105px auto 0px;
+        }
+        @include md {
+            margin: 78px auto 0px;
+        }
+        @include sm {
+            margin: 56px auto 0px;
+        }
+        @include xs {
+            margin: 44px auto 0px;
+        }
+        @include xxs {
+            margin: 33px auto 0px;
+        }
+        @include tn {
+            margin: 25px auto 0px;
+        }
+    }
+    &medium-title {
+        @include v-center-content;
+        justify-content: center;
+        font: $font_type3;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        letter-spacing: 0px;
+        width: 100%;
+        height: 100%;
+        @include lg {
+            font-size: 22px;
+            text-align: center;
+        }
+        @include md {
+            font-size: 20px;
+        }
+        @include sm {
+            font-size: 19px;
+        }
+        @include xs {
+            font-size: 18px;
+        }
+        @include xxs {
+            font-size: 17px;
+        }
+        @include tn {
+            font-size: 16px;
+        }
+    }
+    &box8 {
+        background-color: rgb(68, 68, 68);
+        border-radius: 5px 5px 0px 0px;
+    }
+    &box8.layout {
+        position: relative;
+        height: 63px;
+        margin: 102px 0px 0px;
+        @include lg {
+            margin: 84px 0px 0px;
+        }
+        @include md {
+            margin: 65px 0px 0px;
+        }
+        @include sm {
+            margin: 49px 0px 0px;
+        }
+        @include xs {
+            margin: 40px 0px 0px;
+        }
+        @include xxs {
+            margin: 32px 0px 0px;
+        }
+        @include tn {
+            margin: 27px 0px 0px;
+        }
+    }
+}

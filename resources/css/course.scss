@@ -1,0 +1,1091 @@
+/* This source code is exported from pxCode, you can get more document from https://www.pxcode.io */
+@import "utils";
+
+$font_type0: 16px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type1: 19.00857925415039px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type2: 16.509016036987305px/0.5 "Inter", Helvetica, Arial, serif;
+$font_type3: 500 10.559337615966797px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type4: 500 14.783071517944336px/1.2 "Inter", Helvetica, Arial, serif;
+$font_type5: 700 14.015793800354004px/1.2 "Inter", Helvetica, Arial, serif;
+
+.course- {
+    &block {
+        @include flex-column;
+        background-color: rgb(255, 255, 255);
+    }
+    &block.layout {
+        position: relative;
+        overflow: hidden;
+        min-height: 1023px;
+        flex-shrink: 0;
+    }
+    &header {
+        @include flex-column;
+        background-color: rgb(68, 68, 68);
+        border-radius: 0px 0px 5px 5px;
+    }
+    &header.layout {
+        position: relative;
+        height: min-content;
+        margin: 0px 1px 0px 2px;
+    }
+    &block2 {
+        display: flex;
+    }
+    &block2.layout {
+        position: relative;
+        height: min-content;
+        margin: 9px 0px;
+    }
+    &block2-item {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 338px;
+    }
+    &block3 {
+        display: flex;
+    }
+    &block3.layout {
+        position: relative;
+        height: min-content;
+    }
+    &highlights {
+        @include v-center-content;
+        justify-content: center;
+        font: $font_type0;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        letter-spacing: 0px;
+    }
+    &highlights.layout {
+        position: relative;
+        flex: 0 0 auto;
+        height: min-content;
+        margin: 8px 0px 8px 8px;
+    }
+    &block3-spacer {
+        flex: 0 1 19px;
+    }
+    &highlights.layout1 {
+        position: relative;
+        flex: 0 0 auto;
+        height: min-content;
+        margin: 8px 11px 8px 0px;
+    }
+    &block2-spacer {
+        flex: 0 1 602px;
+    }
+    &block2-item1 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 497px;
+    }
+    &block4 {
+        display: flex;
+    }
+    &block4.layout {
+        position: relative;
+        height: min-content;
+    }
+    &highlights.layout2 {
+        position: relative;
+        flex: 0 0 auto;
+        height: min-content;
+        margin: 8px 0px 8px 59px;
+    }
+    &block4-spacer {
+        flex: 0 1 98px;
+    }
+    &highlights.layout3 {
+        position: relative;
+        flex: 0 0 auto;
+        height: min-content;
+        margin: 8px 0px;
+    }
+    &block4-spacer1 {
+        flex: 0 1 94.5px;
+    }
+    &highlights.layout4 {
+        position: relative;
+        flex: 0 0 auto;
+        height: min-content;
+        margin: 8px 55.5px 8px 0px;
+    }
+    &table {
+        display: flex;
+    }
+    &table.layout {
+        position: relative;
+        height: min-content;
+        margin: 86px 33px 0px;
+    }
+    &table-item {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 1017px;
+    }
+    &col {
+        @include flex-column;
+    }
+    &col.layout {
+        position: relative;
+        height: min-content;
+    }
+    &row {
+        display: flex;
+        background-color: rgb(196, 196, 196);
+        box-shadow: -5.702573776245117px 5.702573776245117px 3.801715850830078px 0px rgba(0, 0, 0, 0.4980392156862745);
+        border-radius: 14.256434440612793px 14.256434440612793px 14.256434440612793px 14.256434440612793px;
+    }
+    &row.layout {
+        position: relative;
+        height: min-content;
+        margin: 10px 10px 0px;
+    }
+    &row-item {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 67px;
+    }
+    &icon {
+        background: var(--src) center center / contain no-repeat;
+        border-radius: 9.504289627075195px 9.504289627075195px 9.504289627075195px 9.504289627075195px;
+    }
+    &icon.layout {
+        position: relative;
+        height: 52px;
+        width: 52px;
+        min-width: 52px;
+        margin: 8px 0px 8px 15px;
+    }
+    &row-spacer {
+        flex: 0 1 22px;
+    }
+    &row-item1 {
+        @include flex-column;
+        position: relative;
+        flex: 1 1 859px;
+    }
+    &highlights1-box {
+        @include v-center-content;
+    }
+    &highlights1-box.layout {
+        position: relative;
+        height: min-content;
+        margin: 11px 49px 11px 0px;
+    }
+    &highlights1 {
+        overflow: visible;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin: 0px;
+        @include font-face($font_type1, rgb(0, 0, 0), 0px);
+        white-space: pre-wrap;
+    }
+    &row.layout1 {
+        position: relative;
+        height: min-content;
+        margin: 24px 10px 0px;
+    }
+    &block9 {
+        @include flex-column;
+        background-color: rgb(255, 255, 255);
+        border-radius: 9.504289627075195px 9.504289627075195px 9.504289627075195px 9.504289627075195px;
+    }
+    &block9.layout {
+        position: relative;
+        height: min-content;
+        margin: 8px 0px 11px 15px;
+    }
+    &block10 {
+        @include flex-column;
+    }
+    &block10.layout {
+        position: relative;
+        height: 24px;
+        margin: 13px 14px;
+    }
+    &row-item2 {
+        @include flex-column;
+        position: relative;
+        flex: 1 1 859px;
+    }
+    &highlights11-box {
+        @include v-center-content;
+    }
+    &highlights11-box.layout {
+        position: relative;
+        height: min-content;
+        margin: 11.5px 49px 11.5px 0px;
+    }
+    &row.layout2 {
+        position: relative;
+        height: min-content;
+        margin: 24px 10px 0px;
+    }
+    &block12 {
+        @include flex-column;
+        background-color: rgb(255, 255, 255);
+        border-radius: 9.504289627075195px 9.504289627075195px 9.504289627075195px 9.504289627075195px;
+    }
+    &block12.layout {
+        position: relative;
+        height: min-content;
+        margin: 8px 0px 8px 15px;
+    }
+    &block13 {
+        @include flex-column;
+    }
+    &block13.layout {
+        position: relative;
+        height: 24px;
+        margin: 14px;
+    }
+    &row-item3 {
+        @include flex-column;
+        position: relative;
+        flex: 1 1 859px;
+    }
+    &highlights11-box.layout1 {
+        position: relative;
+        height: min-content;
+        margin: 11px 49px 11px 0px;
+    }
+    &row.layout3 {
+        position: relative;
+        height: min-content;
+        margin: 24px 10px 0px;
+    }
+    &block18 {
+        @include flex-column;
+        background-color: rgb(255, 255, 255);
+        border-radius: 9.504289627075195px 9.504289627075195px 9.504289627075195px 9.504289627075195px;
+    }
+    &block18.layout {
+        position: relative;
+        height: min-content;
+        margin: 8px 0px 8px 15px;
+    }
+    &block19 {
+        @include flex-column;
+    }
+    &block19.layout {
+        position: relative;
+        height: 24px;
+        margin: 14px;
+    }
+    &row-item4 {
+        @include flex-column;
+        position: relative;
+        flex: 1 1 859px;
+    }
+    &highlights11-box.layout2 {
+        position: relative;
+        height: min-content;
+        margin: 11px 49px 11px 0px;
+    }
+    &row.layout4 {
+        position: relative;
+        height: min-content;
+        margin: 24px 10px 0px;
+    }
+    &row-item5 {
+        @include flex-column;
+        position: relative;
+        flex: 1 1 859px;
+    }
+    &row.layout5 {
+        position: relative;
+        height: min-content;
+        margin: 24px 10px 0px;
+    }
+    &row-item6 {
+        @include flex-column;
+        position: relative;
+        flex: 1 1 859px;
+    }
+    &highlights11-box.layout3 {
+        position: relative;
+        height: min-content;
+        margin: 11px 49px 11px 0px;
+    }
+    &row.layout6 {
+        position: relative;
+        height: min-content;
+        margin: 24px 10px 10px;
+    }
+    &block15 {
+        @include flex-column;
+        background-color: rgb(255, 255, 255);
+        border-radius: 9.504289627075195px 9.504289627075195px 9.504289627075195px 9.504289627075195px;
+    }
+    &block15.layout {
+        position: relative;
+        height: min-content;
+        margin: 8px 0px 10px 15px;
+    }
+    &block16 {
+        @include flex-column;
+    }
+    &block16.layout {
+        position: relative;
+        height: 24px;
+        margin: 13px 14px;
+    }
+    &row-item7 {
+        @include flex-column;
+        position: relative;
+        flex: 1 1 859px;
+    }
+    &highlights11-box.layout4 {
+        position: relative;
+        height: min-content;
+        margin: 11px 49px 11px 0px;
+    }
+    &table-spacer {
+        flex: 0 1 31px;
+    }
+    &table-item1 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 326px;
+    }
+    &col.layout1 {
+        position: relative;
+        height: min-content;
+        margin: 0px 0px 266px;
+    }
+    &row1 {
+        @include flex-column;
+        background-color: rgb(241, 245, 246);
+        box-shadow: 8.447469711303711px 3.1678013801574707px 23.230539321899414px 10.55933666229248px
+        rgba(149, 149, 149, 0.10980392156862745);
+        border-radius: 16.894939422607422px 16.894939422607422px 16.894939422607422px 16.894939422607422px;
+    }
+    &row1.layout {
+        position: relative;
+        overflow: hidden;
+        height: min-content;
+    }
+    &flex {
+        @include flex-column;
+    }
+    &flex.layout {
+        position: relative;
+        height: min-content;
+        margin: 24px 0px;
+    }
+    &block22 {
+        display: flex;
+    }
+    &block22.layout {
+        position: relative;
+        height: min-content;
+        margin: 1px 0px 0px;
+    }
+    &highlights2 {
+        @include v-center-content;
+        justify-content: center;
+        font: $font_type2;
+        color: rgb(14, 36, 81);
+        text-align: center;
+        letter-spacing: 0.17px;
+    }
+    &highlights2.layout {
+        position: relative;
+        flex: 0 0 auto;
+        height: min-content;
+        margin: 4px 0px 4px 25px;
+    }
+    &block22-spacer {
+        flex: 0 1 107px;
+    }
+    &line1 {
+        background-color: rgb(228, 229, 231);
+    }
+    &line1.layout {
+        position: relative;
+        height: 1px;
+        margin: 22px 30px 0px 31px;
+    }
+    &block25 {
+        display: flex;
+    }
+    &block25.layout {
+        position: relative;
+        height: min-content;
+        margin: 16px 0px 0px;
+    }
+    &block25-item {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 59px;
+    }
+    &block26 {
+        @include flex-column;
+    }
+    &block26.layout {
+        position: relative;
+        height: min-content;
+        margin: 0px 0px 0px 26px;
+    }
+    &small-text-body {
+        @include h-center-content;
+        font: $font_type3;
+        color: rgb(126, 129, 140);
+        text-align: center;
+        letter-spacing: 0px;
+    }
+    &small-text-body.layout {
+        position: relative;
+        height: min-content;
+        margin: 5px 7px 4px;
+    }
+    &block25-spacer {
+        flex: 0 1 7px;
+    }
+    &block25-item1 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 34px;
+    }
+    &block27 {
+        @include flex-column;
+    }
+    &block27.layout {
+        position: relative;
+        height: min-content;
+    }
+    &small-text-body.layout1 {
+        position: relative;
+        height: min-content;
+        margin: 5px 9px 4px 8px;
+    }
+    &block25-spacer1 {
+        flex: 0 1 6px;
+    }
+    &block25-item2 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 34px;
+    }
+    &small-text-body.layout2 {
+        position: relative;
+        height: min-content;
+        margin: 5px 8.5px 4px 7.5px;
+    }
+    &block25-spacer2 {
+        flex: 0 1 6px;
+    }
+    &block25-item3 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 34px;
+    }
+    &small-text-body.layout3 {
+        position: relative;
+        height: min-content;
+        margin: 5px 8px 4px;
+    }
+    &block25-spacer3 {
+        flex: 0 1 6px;
+    }
+    &block25-item4 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 34px;
+    }
+    &small-text-body.layout4 {
+        position: relative;
+        height: min-content;
+        margin: 5px 8px 4px;
+    }
+    &block25-spacer4 {
+        flex: 0 1 6px;
+    }
+    &block25-item5 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 34px;
+    }
+    &small-text-body.layout5 {
+        position: relative;
+        height: min-content;
+        margin: 5px 7.5px 4px 8.5px;
+    }
+    &block25-spacer5 {
+        flex: 0 1 6px;
+    }
+    &block25-item6 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 60px;
+    }
+    &block27.layout1 {
+        position: relative;
+        height: min-content;
+        margin: 0px 26px 0px 0px;
+    }
+    &small-text-body.layout6 {
+        position: relative;
+        height: min-content;
+        margin: 5px 7.5px 4px 8.5px;
+    }
+    &block28 {
+        @include flex-column;
+    }
+    &block28.layout {
+        position: relative;
+        height: min-content;
+        margin: 16px 0px 0px;
+    }
+    &block29 {
+        display: flex;
+    }
+    &block29.layout {
+        position: relative;
+        height: min-content;
+    }
+    &block29-item {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 51px;
+    }
+    &block30 {
+        @include flex-column;
+        background-color: rgb(31, 149, 175);
+        border-radius: 12.67px 12.67px 12.67px 12.67px;
+    }
+    &block30.layout {
+        position: relative;
+        height: min-content;
+        margin: 0px 0px 0px 26px;
+    }
+    &text-body {
+        @include v-center-content;
+        justify-content: center;
+        font: $font_type4;
+        color: rgb(252, 252, 252);
+        text-align: center;
+        letter-spacing: 0px;
+    }
+    &text-body.layout {
+        position: relative;
+        height: min-content;
+        margin: 4px 7px;
+    }
+    &block29-spacer {
+        flex: 0 1 16px;
+    }
+    &block29-item1 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 26px;
+    }
+    &block31 {
+        @include flex-column;
+    }
+    &block31.layout {
+        position: relative;
+        height: min-content;
+    }
+    &text-body1 {
+        @include v-center-content;
+        justify-content: center;
+        font: $font_type4;
+        color: rgb(14, 36, 81);
+        text-align: center;
+        letter-spacing: 0px;
+    }
+    &text-body1.layout {
+        position: relative;
+        height: min-content;
+        margin: 4px 6.5px;
+    }
+    &block29-item2 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 25px;
+    }
+    &block32 {
+        @include flex-column;
+    }
+    &block32.layout {
+        position: relative;
+        height: min-content;
+    }
+    &text-body1.layout1 {
+        position: relative;
+        height: min-content;
+        margin: 4px 5.5px;
+    }
+    &block29-item3 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 26px;
+    }
+    &text-body1.layout2 {
+        position: relative;
+        height: min-content;
+        margin: 4px 6px;
+    }
+    &block29-item4 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 25px;
+    }
+    &text-body1.layout3 {
+        position: relative;
+        height: min-content;
+        margin: 4px 6px;
+    }
+    &block29-item5 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 26px;
+    }
+    &text-body1.layout4 {
+        position: relative;
+        height: min-content;
+        margin: 4px 6px;
+    }
+    &block32.layout1 {
+        position: relative;
+        height: min-content;
+        margin: 0px 26px 0px 0px;
+    }
+    &text-body1.layout5 {
+        position: relative;
+        height: min-content;
+        margin: 4px 6px;
+    }
+    &block33 {
+        display: flex;
+    }
+    &block33.layout {
+        position: relative;
+        height: min-content;
+        margin: 17px 0px 0px;
+    }
+    &block33-item {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 51px;
+    }
+    &block34 {
+        @include flex-column;
+    }
+    &block34.layout {
+        position: relative;
+        height: min-content;
+        margin: 0px 0px 0px 26px;
+    }
+    &text-body1.layout6 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 5.5px;
+    }
+    &block33-spacer {
+        flex: 0 1 16px;
+    }
+    &block33-item1 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 26px;
+    }
+    &block35 {
+        @include flex-column;
+    }
+    &block35.layout {
+        position: relative;
+        height: min-content;
+    }
+    &text-body1.layout7 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 6px;
+    }
+    &block33-item2 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 25px;
+    }
+    &block34.layout1 {
+        position: relative;
+        height: min-content;
+    }
+    &text-body1.layout8 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 2px;
+    }
+    &block33-item3 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 26px;
+    }
+    &text-body1.layout9 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 4px;
+    }
+    &block33-item4 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 25px;
+    }
+    &block34.layout2 {
+        position: relative;
+        height: min-content;
+    }
+    &text-body1.layout10 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 2.5px;
+    }
+    &block33-item5 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 26px;
+    }
+    &text-body1.layout11 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 2.5px;
+    }
+    &block34.layout3 {
+        position: relative;
+        height: min-content;
+        margin: 0px 26px 0px 0px;
+    }
+    &text-body1.layout12 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 2px;
+    }
+    &block36 {
+        display: flex;
+    }
+    &block36.layout {
+        position: relative;
+        height: min-content;
+        margin: 17px 0px 0px;
+    }
+    &block36-item {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 51px;
+    }
+    &text-body1.layout13 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 2.5px;
+    }
+    &block36-spacer {
+        flex: 0 1 16px;
+    }
+    &block36-item1 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 26px;
+    }
+    &text-body1.layout14 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 2.5px;
+    }
+    &block36-item2 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 25px;
+    }
+    &block34.layout4 {
+        position: relative;
+        height: min-content;
+    }
+    &text-body1.layout15 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 2.5px;
+    }
+    &block36-item3 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 26px;
+    }
+    &block37 {
+        @include flex-column;
+        background-color: rgb(255, 166, 166);
+        border-radius: 12.67px 12.67px 12.67px 12.67px;
+    }
+    &block37.layout {
+        position: relative;
+        height: min-content;
+    }
+    &text-body1.layout16 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 2.5px;
+    }
+    &block36-item4 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 25px;
+    }
+    &block34.layout5 {
+        position: relative;
+        height: min-content;
+    }
+    &text-body1.layout17 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 2px;
+    }
+    &block36-item5 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 26px;
+    }
+    &text-body1.layout18 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 1.5px;
+    }
+    &block34.layout6 {
+        position: relative;
+        height: min-content;
+        margin: 0px 26px 0px 0px;
+    }
+    &text-body1.layout19 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 2.5px;
+    }
+    &text-body1.layout20 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 1.5px;
+    }
+    &block33-item6 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 26px;
+    }
+    &text-body1.layout21 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 1.5px;
+    }
+    &block33-item7 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 25px;
+    }
+    &block34.layout7 {
+        position: relative;
+        height: min-content;
+    }
+    &text-body1.layout22 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 1px;
+    }
+    &block33-item8 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 26px;
+    }
+    &text-body1.layout23 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 2px;
+    }
+    &block33-item9 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 25px;
+    }
+    &block34.layout8 {
+        position: relative;
+        height: min-content;
+    }
+    &text-body1.layout24 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 1px;
+    }
+    &block33-item10 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 26px;
+    }
+    &text-body1.layout25 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 2px;
+    }
+    &block34.layout9 {
+        position: relative;
+        height: min-content;
+        margin: 0px 26px 0px 0px;
+    }
+    &text-body1.layout26 {
+        position: relative;
+        height: min-content;
+        margin: 3.5px 1px;
+    }
+    &block38 {
+        display: flex;
+    }
+    &block38.layout {
+        position: relative;
+        height: min-content;
+        margin: 17px 0px 0px;
+    }
+    &block38-item {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 51px;
+    }
+    &block32.layout2 {
+        position: relative;
+        height: min-content;
+        margin: 0px 0px 0px 26px;
+    }
+    &text-body1.layout27 {
+        position: relative;
+        height: min-content;
+        margin: 4px 1px;
+    }
+    &block38-spacer {
+        flex: 0 1 16px;
+    }
+    &block38-item1 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 26px;
+    }
+    &text-body1.layout28 {
+        position: relative;
+        height: min-content;
+        margin: 4px 1.5px;
+    }
+    &block38-item2 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 25px;
+    }
+    &text-body1.layout29 {
+        position: relative;
+        height: min-content;
+        margin: 4px 2px;
+    }
+    &block38-item3 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 26px;
+    }
+    &text-body11 {
+        @include v-center-content;
+        justify-content: center;
+        font: $font_type4;
+        color: rgb(14, 36, 81);
+        text-align: center;
+        letter-spacing: 0px;
+        opacity: 0;
+    }
+    &text-body11.layout {
+        position: relative;
+        height: min-content;
+        margin: 4px 2px;
+    }
+    &block38-item4 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 25px;
+    }
+    &text-body12 {
+        @include v-center-content;
+        justify-content: center;
+        font: $font_type4;
+        color: rgb(14, 36, 81);
+        text-align: center;
+        letter-spacing: 0px;
+        opacity: 0;
+    }
+    &text-body12.layout {
+        position: relative;
+        height: min-content;
+        margin: 4px 1px;
+    }
+    &block38-item5 {
+        @include flex-column;
+        position: relative;
+        flex: 0 1 26px;
+    }
+    &text-body13 {
+        @include v-center-content;
+        justify-content: center;
+        font: $font_type4;
+        color: rgb(14, 36, 81);
+        text-align: center;
+        letter-spacing: 0px;
+        opacity: 0;
+    }
+    &text-body13.layout {
+        position: relative;
+        height: min-content;
+        margin: 4px 2px;
+    }
+    &block32.layout3 {
+        position: relative;
+        height: min-content;
+        margin: 0px 26px 0px 0px;
+    }
+    &text-body14 {
+        @include v-center-content;
+        justify-content: center;
+        font: $font_type4;
+        color: rgb(14, 36, 81);
+        text-align: center;
+        letter-spacing: 0px;
+        opacity: 0;
+    }
+    &text-body14.layout {
+        position: relative;
+        height: min-content;
+        margin: 4px 1px;
+    }
+    &row2 {
+        @include flex-column;
+        background-color: rgb(241, 245, 246);
+        border-radius: 7px 7px 7px 7px;
+    }
+    &row2.layout {
+        position: relative;
+        height: min-content;
+        margin: 31px 21px 0px 0px;
+    }
+    &text-body2 {
+        @include v-center-content;
+        justify-content: center;
+        font: $font_type5;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        letter-spacing: 0px;
+    }
+    &text-body2.layout {
+        position: relative;
+        height: min-content;
+        margin: 5px 0px 77px;
+    }
+    &footer {
+        background-color: rgb(68, 68, 68);
+        border-radius: 5px 5px 0px 0px;
+    }
+    &footer.layout {
+        position: relative;
+        height: 63px;
+        margin: 86px 0px 0px;
+    }
+}

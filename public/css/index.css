@@ -1,0 +1,623 @@
+.w-45p{
+    width: 45%;
+    margin-left: 4%;
+}
+
+.tasks{
+    width: 100%;
+    max-height: 80px;
+    margin: 20px 0 10px 20px;
+    padding: 5px;
+
+    background: #C4C4C4;
+    box-shadow: -6px 6px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.ico{
+    width: 52px;
+    height: 52px;
+
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+.tasks p{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+.schedule{
+    width: 305px;
+    min-height: 99px;
+    padding: 10px 0 10px 10px;
+    background: #F1F5F6;
+    border-radius: 7px;
+}
+
+.calendar {
+    position: fixed;
+    max-width: 400px;
+    --side-padding: 20px;
+    --border-radius: 34px;
+    --accent-br: 15px;
+    width: 400px;
+}
+.calendar select {
+    background-color: #f3f4f6;
+    padding: 15px 20px;
+}
+.calendar__opts {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    padding: 20px var(--side-padding);
+}
+.calendar__body {
+    background-image: linear-gradient(to bottom, #f3f4f6, #fff);
+}
+.calendar__days {
+    background-color: #fff;
+    padding: 0 var(--side-padding) 10px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+.calendar__days > div {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.02rem;
+    color: #c5c8ca;
+}
+.calendar__dates {
+    padding: 10px var(--side-padding);
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+.calendar__date {
+    --height: calc(400px / 6 - var(--side-padding));
+    text-align: center;
+    height: var(--height);
+    line-height: var(--height);
+    font-weight: 600;
+    font-size: 1.02rem;
+    cursor: pointer;
+    position: relative;
+}
+.calendar__date::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: calc(var(--height) * 0.9);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--accent-br);
+    transition: background-color 0.3s ease;
+}
+.calendar__date:not(.calendar__date--selected):not(.calendar__date--grey):hover::before {
+    background-color: #ededed;
+}
+.calendar__date--grey {
+    color: #c5c8ca;
+    cursor: not-allowed;
+}
+.calendar__date--selected {
+    color: #ff374b;
+}
+.calendar__date--selected::before {
+    background-color: #ffeaec;
+    border-radius: 0px;
+}
+.calendar__date--first-date::before {
+    border-top-left-radius: var(--accent-br);
+    border-bottom-left-radius: var(--accent-br);
+}
+.calendar__date--last-date::before {
+    border-top-right-radius: var(--accent-br);
+    border-bottom-right-radius: var(--accent-br);
+}
+.calendar__date--range-start::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    border-radius: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff374b;
+    width: 10px;
+    height: 4px;
+}
+.calendar__date--range-end {
+    color: #fff;
+}
+.calendar__date--range-end::before {
+    box-shadow: 0 15px 20px -3px rgba(255, 55, 75, 0.35);
+    background-color: #ff374b;
+    border-radius: var(--accent-br);
+    z-index: 1;
+}
+.calendar__date--range-end::after {
+    content: "";
+    position: absolute;
+    height: calc(var(--height) * 0.9);
+    background-color: #ffeaec;
+    width: 50px;
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%);
+}
+.calendar__date span {
+    position: relative;
+    z-index: 1;
+}
+
+select,
+button {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.02rem;
+    border-radius: 20px;
+    outline: none;
+    border: 0;
+    padding: 15px 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='960px' height='560px' viewBox='0 0 960 560' enable-background='new 0 0 960 560' xml:space='preserve'%3E%3Cg id='Rounded_Rectangle_33_copy_4_1_'%3E%3Cpath d='M480,344.181L268.869,131.889c-15.756-15.859-41.3-15.859-57.054,0c-15.754,15.857-15.754,41.57,0,57.431l237.632,238.937 c8.395,8.451,19.562,12.254,30.553,11.698c10.993,0.556,22.159-3.247,30.555-11.698l237.631-238.937 c15.756-15.86,15.756-41.571,0-57.431s-41.299-15.859-57.051,0L480,344.181z'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - var(--side-padding)) center;
+}
+
+/*Task*/
+
+.main-task{
+    margin: 50px;
+}
+
+.main-task .file{
+    width: 175px;
+    height: 175px;
+    left: 0px;
+    top: 0px;
+
+    background: #C4C4C4;
+    border-radius: 10px 10px 10px 5px;
+}
+
+.task-elems{
+    margin: 36px !important;
+}
+
+.main-task .theme{
+    display: flex;
+    align-items: flex-end;
+    height: 175px;
+}
+
+.main-task .description{
+    padding: 10px;
+}
+
+/*chat App*/
+
+.allUsersList{
+    width: 300px;
+    margin: 20px;
+}
+.allUsersList .card-header{
+    background: #683db8;
+    color: #FFF;
+    padding: 10px;
+}
+.allUsersList .image img{
+    border-radius: 16px;
+}
+.usersChatList{
+    position: absolute;
+    width: 250px;
+    bottom: 0;
+    margin-bottom: 0;
+    right: 360px;
+}
+.show{
+    display: block;
+}
+.thumb-user-list{
+    display: none;
+}
+.thumb-user-list .image img{
+    border-radius: 30px;
+}
+.usersChatList .card-header{
+    background: #683db8;
+    font-size: 13px;
+}
+.chatBox{
+    font-size: 13px;
+}
+.chat-content{
+    overflow: auto;
+    height: 300px;
+}
+.chatBox .card{
+    width: 100%;
+    border-radius: 4px;
+}
+.chatBox .card-header{
+    background: #683db8;
+}
+.header-title{
+    height: 50px;
+}
+.card-header-title i{
+    font-size: 10px;
+    color: #32e4cd;
+    margin-right: 6px;
+}
+.card-header .card-header-title{
+    color: #FFF;
+}
+.chat-content small{
+    margin: 0;
+}
+.chat-content p{
+    background: #ecf1f8;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 0;
+}
+.my-content .media-content{
+    width: 80%;
+}
+.my-content .message{
+    float: right;
+    background: #683db8;
+    color: #FFF;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+.my-content .chat-content small{
+    float: right;
+}
+.my-content small{
+    display: block;
+    float: right;
+    width: 100%;
+    text-align: right;
+}
+.chat-textarea{
+    font-size: 14px;
+    padding: 8px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+}
+.chat-message-group{
+
+}
+.chat-message-group .chat-thumb{
+    float: left;
+    width: 10%;
+}
+.chat-message-group .chat-messages{
+    float: left;
+    width: 80%;
+    margin-bottom: 20px;
+}
+.chat-message-group .message{
+    float: left;
+    padding: 10px;
+    background: #ecf1f8;
+    font-size: 13px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+.chat-messages .from{
+    float: left;
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 11px;
+}
+.chat-thumb img{
+    border-radius: 40px;
+}
+.writer-user .chat-messages{
+    float: right;
+    width: 100%;
+}
+.writer-user .chat-messages .message{
+    float: right;
+    background: #683db8;
+    color: #FFF;
+}
+.writer-user .chat-messages .from{
+    float: left;
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+.chat-message-group .typing{
+    float: left;
+}
+.chatBox .card-header-icon i{
+    color: #FFF;
+    font-size: 13px;
+}
+/* CSSS */
+.outside-box{
+    height: 100px;
+    background: #F8C;
+    width: 200px;
+    margin: 20px;
+    overflow: auto;
+}
+.outside-box .content-insider{
+    height: 300px;
+    background: #C9C;
+}
+/* CSS Spinner */
+.spinner {
+    margin: 0 30px;
+    width: 70px;
+    text-align: center;
+}
+
+.spinner > div {
+    width: 4px;
+    height: 4px;
+    background-color: #888;
+
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    } 40% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+      }
+}
+/* EmojiBox */
+.emojiBox{
+    width: 150px;
+    margin: 30px;
+}
+.emojiBox .box{
+    height: 100px;
+    padding: 4px;
+}
+/* */
+.card-header-title img{
+    border-radius: 40px;
+}
+
+/*notice board*/
+
+.board{
+    margin: 15px;
+}
+
+/*profile*/
+
+.container{
+    margin-top: 20px;
+}
+
+.card {
+    width: 350px;
+    background-color: #efefef;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s
+}
+
+.image img {
+    transition: all 0.5s
+}
+
+.card:hover .image img {
+    transform: scale(1.5)
+}
+
+.center{
+    width: 100%;
+    align-content: center;
+}
+.btn {
+    /*height: 60px;*/
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 22px;
+    font-weight: bold
+}
+
+.idd {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 600
+}
+
+.idd1 {
+    font-size: 12px
+}
+
+.number {
+    font-size: 22px;
+    font-weight: bold
+}
+
+.follow {
+    font-size: 12px;
+    font-weight: 500;
+    color: #444444
+}
+
+.btn1 {
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: #000;
+    color: #aeaeae;
+    font-size: 15px
+}
+
+.text span {
+    font-size: 13px;
+    color: #545454;
+    font-weight: 500
+}
+
+.icons i {
+    font-size: 19px
+}
+
+hr .new1 {
+    border: 1px solid
+}
+
+.join {
+    font-size: 14px;
+    color: #a0a0a0;
+    font-weight: bold
+}
+
+.date {
+    background-color: #ccc
+}
+
+
+/*new_teacher*/
+
+.text-center .btn{
+    min-width: 300px;
+}
+
+/*new_student*/
+
+.add_students{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 15px;
+
+    position: sticky;
+    /*max-width: 250px !important;*/
+    height: 85px;
+    right: 19px;
+    bottom: 85px;
+}
+
+.std-btn{
+    width: 250px;
+}
+
+/*  add post    */
+.add_post{
+    position: fixed;
+    display: flex;
+    /*align-items: flex-start;*/
+    margin-top: 20px !important;
+    padding: 5px;
+    /*gap: 1px;*/
+    background: #C4C4C4;
+    border-radius: 5px;
+
+    max-width: 450px;
+    height: 800px;
+}
+
+.post-img{
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    /*padding: 48px 111px;*/
+    gap: 10px;
+
+    width: 450px;
+    height: 250px;
+
+    background: #F8F8F8;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.input__wrapper {
+    width: 100%;
+    position: relative;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.input__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.input__file-icon {
+    height: 200px;
+    width: 200px;
+}
+
+.input__file-button {
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.post-description .form-label{
+    margin-top: 5px;
+    font-size: x-large;
+}
+
+.post-description textarea.form-control{
+    height: 300px;
+}
