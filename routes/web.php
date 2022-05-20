@@ -32,6 +32,21 @@ Route::get(
     [\App\Http\Controllers\TaskController::class, 'index']
 )->name('task');
 
+Route::get(
+    '/profile',
+    [\App\Http\Controllers\ProfileController::class, 'index']
+)->middleware(['auth'])->name('profile');
+
+Route::get(
+    '/new_teacher',
+    [\App\Http\Controllers\NewTeacherController::class, 'index']
+)->name('new_teacher');
+
+Route::get(
+    '/new_students',
+    [\App\Http\Controllers\NewStudentsController::class, 'index']
+)->name('new_students');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

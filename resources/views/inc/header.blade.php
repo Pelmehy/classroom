@@ -4,21 +4,30 @@
             <div class="collapse navbar-collapse" id="navbarsExample05">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Особистий кабінет</a>
+                        <a class="nav-link" aria-current="page" href="{{route('profile')}}">Особистий кабінет</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Дошка оголошень</a>
+                        <a class="nav-link" href="{{route('posts')}}">Дошка оголошень</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('new_students')}}">Новиі студенти</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('new_teacher')}}">Новий викладач</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav me-left mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Курси</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('main')}}">Курси</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Календар</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Оцінки</a>
+                        <a class="nav-link" href="#">Групи</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Поточний контроль</a>
                     </li>
                     @if (Route::has('login'))
                         @auth

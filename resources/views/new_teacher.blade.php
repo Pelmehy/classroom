@@ -23,7 +23,7 @@
                         </div>
 
                         <div class="col-12">
-                            <label for="email" class="form-label">По батькові <span class="text-muted">(Optional)</span></label>
+                            <label for="email" class="form-label">По батькові </label>
                             <input type="text" class="form-control" id="email" placeholder="">
                             <div class="invalid-feedback">
                                 Please enter a valid email address for shipping updates.
@@ -33,11 +33,6 @@
                         <div class="col-12">
                             <label for="address" class="form-label">Факультет</label>
                             <input type="text" class="form-control" id="address" placeholder="" required="">
-                        </div>
-
-                        <div class="col-12">
-                            <label for="address2" class="form-label">Кафедра<span class="text-muted">(Optional)</span></label>
-                            <input type="text" class="form-control" id="address2" placeholder="">
                         </div>
                     </div>
                     <br>
@@ -56,7 +51,7 @@
                     </div>
 
                     <div class="col-12">
-                        <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                        <label for="email" class="form-label">Email </label>
                         <input type="email" class="form-control" id="email" placeholder="you@example.com">
                     </div>
 

@@ -15,7 +15,7 @@
 <body>
 @include('inc.header')
 
-<div class="container mt-5">
+<div class="container-lg mt-2">
 
     @yield('content')
 

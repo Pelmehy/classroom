@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="col-12">
-                            <label for="email" class="form-label">По батькові <span class="text-muted">(Optional)</span></label>
+                            <label for="email" class="form-label">По батькові </label>
                             <input type="text" class="form-control" id="email" placeholder="">
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                         </div>
 
                         <div class="col-12">
-                            <label for="email" class="form-label">По батькові <span class="text-muted">(Optional)</span></label>
+                            <label for="email" class="form-label">По батькові </label>
                             <input type="text" class="form-control" id="email" placeholder="">
                         </div>
                     </div>
@@ -134,7 +134,7 @@
                         </div>
 
                         <div class="col-12">
-                            <label for="email" class="form-label">По батькові <span class="text-muted">(Optional)</span></label>
+                            <label for="email" class="form-label">По батькові </label>
                             <input type="text" class="form-control" id="email" placeholder="">
                         </div>
                     </div>
@@ -179,7 +179,7 @@
                         </div>
 
                         <div class="col-12">
-                            <label for="email" class="form-label">По батькові <span class="text-muted">(Optional)</span></label>
+                            <label for="email" class="form-label">По батькові </label>
                             <input type="text" class="form-control" id="email" placeholder="">
                         </div>
                     </div>
