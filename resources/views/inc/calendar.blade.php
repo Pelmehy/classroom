@@ -3,37 +3,35 @@
     <div class="calendar col-8">
         <div class="calendar__opts">
             <select name="calendar__month" id="calendar__month" class="w-45p">
-                <option>Jan</option>
-                <option>Feb</option>
-                <option>Mar</option>
-                <option>Apr</option>
-                <option selected>May</option>
-                <option>Jun</option>
-                <option>Jul</option>
-                <option>Aug</option>
-                <option>Sep</option>
-                <option>Oct</option>
-                <option>Nov</option>
-                <option>Dec</option>
+                <option value="0">Січень</option>
+                <option value="1">Лютий</option>
+                <option value="2">Березень</option>
+                <option value="3">Квітень</option>
+                <option value="4">Травень</option>
+                <option value="5">Червень</option>
+                <option value="6">Липень</option>
+                <option value="7">Серпень</option>
+                <option value="8">Вересень</option>
+                <option value="9">Жовтен</option>
+                <option value="10">Листопад</option>
+                <option value="11">Грудень</option>
             </select>
 
             <select name="calendar__year" id="calendar__year" class="w-45p">
-                <option>2017</option>
-                <option>2018</option>
-                <option>2019</option>
-                <option selected>2020</option>
+                <option>2021</option>
+                <option selected>2022</option>
             </select>
         </div>
 
         <div class="calendar__body">
             <div class="calendar__days">
-                <div>M</div>
-                <div>T</div>
-                <div>W</div>
-                <div>T</div>
-                <div>F</div>
-                <div>S</div>
-                <div>S</div>
+                <div>Пн</div>
+                <div>Вт</div>
+                <div>Ср</div>
+                <div>Чт</div>
+                <div>Пт</div>
+                <div>Сб</div>
+                <div>Вс</div>
             </div>
 
             <div class="calendar__dates">
@@ -60,8 +58,8 @@
                 <div class="calendar__date calendar__date--selected calendar__date--last-date"><span>17</span></div>
                 <div class="calendar__date calendar__date--selected calendar__date--first-date"><span>18</span></div>
                 <div class="calendar__date calendar__date--selected"><span>19</span></div>
-                <div class="calendar__date calendar__date--selected"><span>20</span></div>
-                <div class="calendar__date calendar__date--selected calendar__date--last-date calendar__date--range-end"><span>21</span></div>
+                <div class="calendar__date calendar__date--selected calendar__date--last-date"><span>20</span></div>
+                <div class="calendar__date calendar__date--selected calendar__date--range-end"><span>21</span></div>
                 <div class="calendar__date"><span>22</span></div>
                 <div class="calendar__date"><span>23</span></div>
                 <div class="calendar__date"><span>24</span></div>
@@ -83,5 +81,6 @@
         </div>
     </div>
 
+    <script src="/js/script.js"></script>
 </div>
 {{--        calendar--}}

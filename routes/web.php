@@ -47,6 +47,11 @@ Route::get(
     [\App\Http\Controllers\NewStudentsController::class, 'index']
 )->name('new_students');
 
+Route::post(
+    '/add_students',
+        [\App\Http\Controllers\NewStudentsController::class, 'add']
+)->name('addStudents');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

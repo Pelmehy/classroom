@@ -41,7 +41,7 @@
                                                      href="route('logout')"
                                                      onclick="event.preventDefault();
                                                         this.closest('form').submit();">
-                                        Log out
+                                        Вихід
                                     </x-dropdown-link>
 
                                 </form>
@@ -49,12 +49,12 @@
 
                         @else
                             <li class="hidden nav-item">
-                                <a href="{{ route('login') }}" class="nav-link">Вихід</a>
+                                <a href="{{ route('login') }}" class="nav-link">Вхід</a>
                             </li>
 
                             @if (Route::has('register'))
                                 <li class="hidden nav-item">
-                                    <a href="{{ route('register') }}" class="nav-link">Register</a>
+                                    <a href="{{ route('register') }}" class="nav-link">Реєстрація</a>
                                 </li>
                             @endif
                         @endauth

@@ -57,11 +57,11 @@
 
                     <div class="col-12">
                         <label for="address" class="form-label">Пароль</label>
-                        <input type="text" class="form-control" id="address" placeholder="*********" required="">
+                        <input type="text" class="form-control" name="password" placeholder="*********" required="" readonly>
                     </div>
 
                     <div class="col-12">
-                        <button class="btn btn btn-success">Генерувати пароль</button>
+                        <button id="get_pass" class="btn btn btn-success">Генерувати пароль</button>
                     </div>
                 </div>
             </div>

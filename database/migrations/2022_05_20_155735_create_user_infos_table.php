@@ -21,6 +21,7 @@ class CreateUserInfosTable extends Migration
             $table->string('fullName');
             $table->string('phone');
             $table->integer('type');
+            $table->integer('first_login');
             $table->timestamps();
         });
     }

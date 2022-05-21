@@ -10,11 +10,9 @@
             <div class="col-md-5 col-lg-4">
                 <div class="container mb-4 p-3 d-flex justify-content-center">
                     <div class="card p-4">
-                        <div class=" image d-flex flex-column justify-content-center align-items-center">
+                        <div class="image d-flex flex-column justify-content-center align-items-center">
                             <span class="name mt-3 mb-3">Профіль</span>
-                            <button class="btn btn-secondary">
-                                <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" />
-                            </button>
+                            <img src="{{asset('storage'.'/default/a7.ico')}}" height="100" width="100" />
                             <span class="name mt-3">Островой Денис</span>
                             <span class="idd">Студент</span>
                             <span class="idd">ТР-82</span>
