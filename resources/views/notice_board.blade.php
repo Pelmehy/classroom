@@ -6,10 +6,11 @@
 
 @section('content')
     <div class="row">
-
-{{--        @include('inc.calendar')--}}
-
-        @include('inc.add_post')
+        @if($access > 2)
+            @include('inc.add_post')
+        @else
+            @include('inc.calendar')
+        @endif
 
         <div class="col-md-7 col-lg-8">
             <div class="board">

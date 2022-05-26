@@ -25,22 +25,22 @@ Route::get(
 Route::get(
     'course/add',
     [\App\Http\Controllers\CourseController::class, 'addForm']
-)->name('add_course_view');
+)->middleware(['auth'])->name('add_course_view');
 
 Route::post(
     'course/add/submit',
     [\App\Http\Controllers\CourseController::class, 'add']
-)->name('add_course');
+)->middleware(['auth'])->name('add_course');
 
 Route::get(
     '/course/{course_id}',
     [\App\Http\Controllers\CourseController::class, 'index']
-)->name('currentCourse');
+)->middleware(['auth'])->name('currentCourse');
 
 Route::get(
     '/task/{course_id}/{task_id}',
     [\App\Http\Controllers\TaskController::class, 'index']
-)->name('task');
+)->middleware(['auth'])->name('task');
 
 Route::get(
     '/profile',
@@ -50,25 +50,21 @@ Route::get(
 Route::get(
     '/new_teacher',
     [\App\Http\Controllers\NewTeacherController::class, 'index']
-)->name('new_teacher');
+)->middleware(['auth'])->name('new_teacher');
 
 Route::get(
     '/new_students',
     [\App\Http\Controllers\NewStudentsController::class, 'index']
-)->name('new_students');
+)->middleware(['auth'])->name('new_students');
 
 Route::post(
     '/add_students',
         [\App\Http\Controllers\NewStudentsController::class, 'add']
-)->name('addStudents');
+)->middleware(['auth'])->name('addStudents');
 
-Route::post(
-    '/users_export',
-    [\App\Exports\UserExport::class, 'export']
-)->name('addStudents');
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+//Route::post(
+//    '/users_export',
+//    [\App\Exports\UserExport::class, 'export']
+//)->middleware(['auth'])->name('addStudents');
 
 require __DIR__.'/auth.php';

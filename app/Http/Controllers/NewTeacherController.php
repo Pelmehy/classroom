@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\Validation;
+use App\Models\UserInfo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class NewTeacherController extends Controller
 {
@@ -19,6 +22,9 @@ class NewTeacherController extends Controller
 
     public function index()
     {
-        return view('new_teacher');
+        Validation::isAdmin();
+
+        $params['access'] = UserInfo::get_user_role(Auth::user()->id);
+        return view('new_teacher', $params);
     }
 }
