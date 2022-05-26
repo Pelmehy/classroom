@@ -26,4 +26,8 @@ class Posts extends Controller
         $params['posts'] = Post::all();
         return view('notice_board', $params);
     }
+
+    public function add(){
+        return view('main');
+    }
 }

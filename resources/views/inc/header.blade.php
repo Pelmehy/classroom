@@ -18,7 +18,10 @@
                 </ul>
                 <ul class="navbar-nav me-left mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{route('main')}}">Курси</a>
+                        <a class="nav-link active" href="{{route('main')}}">Курси</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('add_course_view')}}">Додати курс</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Календар</a>

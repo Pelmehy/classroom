@@ -20,4 +20,8 @@ class Course extends Controller
         $params['courses'] = Cource::all();
         return view('main', $params);
     }
+
+    public function addForm(){
+        return view('new_course');
+    }
 }

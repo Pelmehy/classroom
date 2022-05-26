@@ -23,6 +23,16 @@ Route::get(
 )->name('posts');
 
 Route::get(
+    'course/add',
+    [\App\Http\Controllers\CourseController::class, 'addForm']
+)->name('add_course_view');
+
+Route::post(
+    'course/add/submit',
+    [\App\Http\Controllers\CourseController::class, 'add']
+)->name('add_course');
+
+Route::get(
     '/course/{course_id}',
     [\App\Http\Controllers\CourseController::class, 'index']
 )->name('currentCourse');
@@ -50,6 +60,11 @@ Route::get(
 Route::post(
     '/add_students',
         [\App\Http\Controllers\NewStudentsController::class, 'add']
+)->name('addStudents');
+
+Route::post(
+    '/users_export',
+    [\App\Exports\UserExport::class, 'export']
 )->name('addStudents');
 
 Route::get('/dashboard', function () {
