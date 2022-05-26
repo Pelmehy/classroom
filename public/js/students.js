@@ -15,7 +15,7 @@ function form_gen(count){
             <div class="col-md-5 col-lg-6">
                 <div class="row g-3">
                     <div class="col-sm-6">
-                        <label for="lastName" class="form-label">Фамілія</label>
+                        <label for="lastName" class="form-label">Прізвище</label>
                         <input type="text" class="form-control" name="lastName-${x}" placeholder="" value="" pattern="[A-Za-zА-Яа-я]{,8}" required>
                     </div>
 

@@ -13,7 +13,7 @@
                 <form class="needs-validation" novalidate="">
                     <div class="row g-3">
                         <div class="col-sm-6">
-                            <label for="firstName" class="form-label">Фамілія</label>
+                            <label for="firstName" class="form-label">Прізвище</label>
                             <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
                         </div>
 
