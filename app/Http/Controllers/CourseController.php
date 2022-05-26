@@ -44,10 +44,12 @@ class CourseController extends Controller
         $path = $course->id;
 
 //        dd($course);
-        $file_name = $request->file('img')->store('/'.$path, 'storage');
-        $path = '/storage/'.$file_name;
-        $course->img = $path;
-        $course->save();
+        if ($request->file('img')){
+            $file_name = $request->file('img')->store('/'.$path, 'storage');
+            $path = '/storage/'.$file_name;
+            $course->img = $path;
+            $course->save();
+        }
 
         return redirect()->route('main');
     }
