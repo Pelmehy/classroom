@@ -10,7 +10,7 @@
                         <a class="nav-link" href="{{route('posts')}}">Дошка оголошень</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('new_students')}}">Новиі студенти</a>
+                        <a class="nav-link" href="{{route('new_students')}}">Нові студенти</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('new_teacher')}}">Новий викладач</a>
