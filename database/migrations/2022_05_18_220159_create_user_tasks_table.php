@@ -16,6 +16,7 @@ class CreateUserTasksTable extends Migration
         Schema::create('user_tasks', function (Blueprint $table) {
             $table->id();
             $table->integer('course_id');
+            $table->integer('task_id');
             $table->integer('student_id');
             $table->text('file');
             $table->timestamps();

@@ -22,7 +22,10 @@ class ProfileController extends Controller
     public function index()
     {
         $user_id = Auth::user()->id;
-        $params['user'] = UserInfo::where('user_id', $user_id)->first();
+
+        $params['access'] = UserInfo::get_user_role(Auth::user()->id);
+        $params['user'] = Auth::user();
+        $params['user_info'] = UserInfo::where('user_id', $user_id)->first();
         return view('profile', $params);
     }
 }

@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\Validation;
 use App\Models\User;
 use App\Models\UserInfo;
 use App\Models\Faculty;
 use App\Models\Group;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\Support\Facades\Config;
@@ -29,11 +31,15 @@ class NewStudentsController extends Controller
 
     public function index()
     {
-        return view('new_student');
+        Validation::isTeacher();
+
+        $params['access'] = UserInfo::get_user_role(Auth::user()->id);
+        return view('new_student', $params);
     }
 
     public function add(Request $request){
-//        dd($request);
+        Validation::isTeacher();
+
         $count = $request->input('val');
         $temp = [];
 

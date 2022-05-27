@@ -13,9 +13,10 @@
                         <div class="image d-flex flex-column justify-content-center align-items-center">
                             <span class="name mt-3 mb-3">Профіль</span>
                             <img src="{{asset('storage'.'/default/a7.ico')}}" height="100" width="100" />
-                            <span class="name mt-3">Островой Денис</span>
+                            <span class="name mt-3">{{$user->name}}</span>
                             <span class="idd">Студент</span>
                             <span class="idd">ТР-82</span>
+                            <span class="idd">{{$user_info->type}}</span>
                         </div>
                     </div>
                 </div>

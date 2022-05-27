@@ -2,39 +2,45 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Fifth navbar example">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarsExample05">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{route('profile')}}">Особистий кабінет</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('posts')}}">Дошка оголошень</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('new_students')}}">Нові студенти</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('new_teacher')}}">Новий викладач</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav me-left mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{route('main')}}">Курси</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('add_course_view')}}">Додати курс</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Календар</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Групи</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Поточний контроль</a>
-                    </li>
-                    @if (Route::has('login'))
-                        @auth
+                @if (Route::has('login'))
+                    @auth
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="{{route('profile')}}">Особистий кабінет</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('main')}}">Дошка оголошень</a>
+                            </li>
+                            @if($access > 1)
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('new_students')}}">Нові студенти</a>
+                                </li>
+                                @if($access > 2)
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{route('new_teacher')}}">Новий викладач</a>
+                                    </li>
+                                @endif
+                            @endif
+                        </ul>
 
+                        <ul class="navbar-nav me-left mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{{route('courses')}}">Курси</a>
+                            </li>
+                            @if($access > 1)
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('add_course_view')}}">Додати курс</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Групи</a>
+                            </li>
+                            @endif
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Календар</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Поточний контроль</a>
+                            </li>
                             <li class="nav-item">
                                 <form method="POST" action="{{ route('logout') }}">
 
@@ -49,8 +55,14 @@
 
                                 </form>
                             </li>
-
-                        @else
+                        </ul>
+                    @else
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('main')}}">Дошка оголошень</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav me-left mb-2 mb-lg-0">
                             <li class="hidden nav-item">
                                 <a href="{{ route('login') }}" class="nav-link">Вхід</a>
                             </li>
@@ -60,9 +72,9 @@
                                     <a href="{{ route('register') }}" class="nav-link">Реєстрація</a>
                                 </li>
                             @endif
-                        @endauth
-                    @endif
-                </ul>
+                        </ul>
+                    @endauth
+                @endif
             </div>
         </div>
     </nav>
