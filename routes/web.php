@@ -43,9 +43,14 @@ Route::get(
 )->middleware(['auth'])->name('task');
 
 Route::post(
-    '/task/add/homework/',
+    '/task/add/homework/{course_id}/{task_id}',
     [\App\Http\Controllers\TaskController::class, 'addHomework']
 )->middleware(['auth'])->name('addHomework');
+
+Route::post(
+    'task/rate/homework/',
+    [\App\Http\Controllers\TaskController::class, 'rateHomework']
+)->middleware(['auth'])->name('rateHomework');
 
 Route::post(
     '/task/add/{course_id}',

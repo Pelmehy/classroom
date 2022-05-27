@@ -12,4 +12,8 @@ class UserInfo extends Model
     public function get_user_role($user_id){
         return UserInfo::where('user_id', $user_id)->first()->type;
     }
+
+    public function get($user_id){
+        return UserInfo::where('user_id', $user_id)->first();
+    }
 }

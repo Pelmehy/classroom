@@ -100,7 +100,11 @@
         <div class="col-md-6">
             @if($access == 1)
                 <div class="h-100 p-5 bg-light border rounded-3">
-                    <h2>Мої завдання</h2>
+                    @if($user_task)
+                        <h2>
+                            <a href="{{asset('storage').$user_task->file}}">Мої завдання</a>
+                        </h2>
+                    @endif
                     <h2>Срок здачі: {{$task->end_date}}</h2>
                     <br><br>
                     <form action="{{route('addHomework')}}" method="post" enctype="multipart/form-data">
@@ -126,8 +130,34 @@
                     </form>
                 </div>
             @else
-                <div class="h-100 p-5 bg-light border rounded-3" style="overflow: auto">
+                <div class="overflow h-100 bg-light border rounded-3" style="">
+                    @foreach($user_tasks as $user_task)
+                        <div class="student_tasks w-100 d-flex text-muted pt-3">
+                            <a href="{{asset('storage').$user_task->file}}">
+                                <div class="ico flex-shrink-0 me-2">
+                                    <img src="{{asset('storage')}}./default/file.ico" alt="">
+                                </div>
+                            </a>
+                            <div class="row media-body w-100 pb-3 mb-0 small lh-125">
+                                <div class="col justify-content-between align-items-center w-100">
+                                    <strong class="text-gray-dark">{{$user_task->user->fullName}}</strong>
+                                    <br>
+                                    <span class="w-100">{{$user_task->updated_at}}</span>
+                                </div>
+                                    <form action="{{route('rateHomework')}}" class="col input-group mb-3" method="POST">
+                                        @csrf
 
+                                        <input type="hidden" name="course_id" value="{{$course_id}}">
+                                        <input type="hidden" name="task_id" value="{{$task_id}}">
+
+                                        <input type="value" class="form-control" name="rate" placeholder="Оцінка" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="submit">Додати</button>
+                                        </div>
+                                    </form>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             @endif
         </div>
