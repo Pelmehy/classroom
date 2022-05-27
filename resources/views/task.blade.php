@@ -9,14 +9,20 @@
     <div class="main-task pb-3 border">
         <div class="d-grid gap-2" style="grid-template-columns: 0fr 2fr;">
             <div class="file border rounded-3">
-
+                @if($task->type == 0)
+                    <img src="{{asset('storage')}}./default/text.ico" alt="">
+                @else
+                    <a type="file" href="{{asset('storage').$task->file}}"><img src="{{asset('storage')}}/default/file.ico" alt=""></a>
+                @endif
             </div>
             <div class="theme rounded-3">
-                <h2>Тема завдання: консультация с широким активом способствует подготовки</h2>
+                <h2>Тема завдання: {{$task->name}}</h2>
             </div>
         </div>
         <div class="description border-top rounded-3">
-            <p class="lead">Опис завдання: Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации существенных финансовых и административных условий. Равным образом постоянный количественный рост и сфера нашей активности способствует подготовки и реализации форм развития. С другой стороны новая модель организационной деятельности позволяет выполнять важные задания по разработке новых предложений. Равным образом укрепление и развитие структуры</p>
+            <p class="lead">Опис завдання:
+                {{$task->description}}
+            </p>
         </div>
     </div>
 
@@ -92,22 +98,38 @@
                 </div>
         </div>
         <div class="col-md-6">
-            <div class="h-100 p-5 bg-light border rounded-3">
-                <h2>Мої завдання</h2>
-                <h2>Срок здачі: 10-10-2023</h2>
-                <br><br>
-                <form>
-                    <div class="form-group border rounded">
-                        <label for="exampleFormControlFile1">Додати файл</label>
+            @if($access == 1)
+                <div class="h-100 p-5 bg-light border rounded-3">
+                    <h2>Мої завдання</h2>
+                    <h2>Срок здачі: {{$task->end_date}}</h2>
+                    <br><br>
+                    <form action="{{route('addHomework')}}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <input type="text" name="course_id" value="{{$task->course_id}}" style="display: none">
+                        <input type="text" name="task_id" value="{{$task->id}}" style="display: none">
+
+                        <div class="form-group border rounded">
+                            <label for="exampleFormControlFile1">Додати файл</label>
+                            <br>
+                            <input type="file" name="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                        @if($error)
+                            <div class="alert alert-danger" role="alert">
+                                {{$error}}
+                            </div>
+                        @endif
                         <br>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                    </div>
-                    <br>
-                </form>
-                <div class="text-center">
-                    <button class="btn btn-outline-success" type="button">Оновити</button>
+
+                        <div class="text-center">
+                            <button class="btn btn-outline-success" type="submit">Оновити</button>
+                        </div>
+                    </form>
                 </div>
-            </div>
+            @else
+                <div class="h-100 p-5 bg-light border rounded-3" style="overflow: auto">
+
+                </div>
+            @endif
         </div>
     </div>
 

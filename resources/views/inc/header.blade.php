@@ -9,7 +9,7 @@
                                 <a class="nav-link" aria-current="page" href="{{route('profile')}}">Особистий кабінет</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('posts')}}">Дошка оголошень</a>
+                                <a class="nav-link" href="{{route('main')}}">Дошка оголошень</a>
                             </li>
                             @if($access > 1)
                                 <li class="nav-item">
@@ -25,7 +25,7 @@
 
                         <ul class="navbar-nav me-left mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" href="{{route('main')}}">Курси</a>
+                                <a class="nav-link active" href="{{route('courses')}}">Курси</a>
                             </li>
                             @if($access > 1)
                             <li class="nav-item">
@@ -59,7 +59,7 @@
                     @else
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('posts')}}">Дошка оголошень</a>
+                                <a class="nav-link" href="{{route('main')}}">Дошка оголошень</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav me-left mb-2 mb-lg-0">

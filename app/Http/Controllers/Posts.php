@@ -29,6 +29,7 @@ class Posts extends Controller
         if (Auth::user()) {
             $params['access'] = UserInfo::get_user_role(Auth::user()->id);
         }
+        else $params['access'] = 0;
         $params['posts'] = Post::all();
         return view('notice_board', $params);
     }

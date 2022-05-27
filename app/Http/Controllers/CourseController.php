@@ -30,7 +30,7 @@ class CourseController extends Controller
     }
 
     public function addForm(){
-        Validation::is_teacher();
+        Validation::isTeacher();
 
         $params['access'] = UserInfo::get_user_role(Auth::user()->id);
         $params['faculty'] = 1;

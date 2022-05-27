@@ -14,13 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',
-    [\App\Http\Controllers\Course::class, 'index']
+    [\App\Http\Controllers\Posts::class, 'index']
 )->name('main');
 
 Route::get(
-    '/posts',
-    [\App\Http\Controllers\Posts::class, 'index']
-)->name('posts');
+    '/main',
+    [\App\Http\Controllers\Course::class, 'index']
+)->name('courses');
 
 Route::get(
     'course/add',
@@ -42,6 +42,16 @@ Route::get(
     [\App\Http\Controllers\TaskController::class, 'index']
 )->middleware(['auth'])->name('task');
 
+Route::post(
+    '/task/add/homework/',
+    [\App\Http\Controllers\TaskController::class, 'addHomework']
+)->middleware(['auth'])->name('addHomework');
+
+Route::post(
+    '/task/add/{course_id}',
+    [\App\Http\Controllers\TaskController::class, 'add']
+)->middleware(['auth'])->name('addTask');
+
 Route::get(
     '/profile',
     [\App\Http\Controllers\ProfileController::class, 'index']
@@ -51,6 +61,11 @@ Route::get(
     '/new_teacher',
     [\App\Http\Controllers\NewTeacherController::class, 'index']
 )->middleware(['auth'])->name('new_teacher');
+
+Route::post(
+    '/new_teacher/add',
+    [\App\Http\Controllers\NewTeacherController::class, 'add']
+)->middleware(['auth'])->name('addTeacher');
 
 Route::get(
     '/new_students',
