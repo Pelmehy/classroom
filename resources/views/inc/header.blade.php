@@ -32,14 +32,14 @@
                                 <a class="nav-link" href="{{route('add_course_view')}}">Додати курс</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Групи</a>
+                                <a class="nav-link" href="{{route('groups_rating')}}">Групи</a>
                             </li>
                             @endif
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Календар</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Поточний контроль</a>
+                                <a class="nav-link" href="{{route('studentRating')}}">Поточний контроль</a>
                             </li>
                             <li class="nav-item">
                                 <form method="POST" action="{{ route('logout') }}">

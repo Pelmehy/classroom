@@ -8,6 +8,7 @@ use App\Models\Post;
 use App\Models\UserInfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use PhpParser\Node\Expr\Cast\Object_;
 
 class Posts extends Controller
@@ -34,8 +35,29 @@ class Posts extends Controller
         return view('notice_board', $params);
     }
 
-    public function add(){
+    public function add(Request $request){
         Validation::isAdmin();
+
+        $file = $request->file('file');
+
+        if (!$file){
+            $params['access'] = UserInfo::get_user_role(Auth::user()->id);
+            $params['error'] = 'Файл не додан';
+            return view('task', $params);
+        }
+
+        $post = new Post();
+        $post->name = $request->input('name');
+        $post->description = $request->input('description');
+        $post->img = ' ';
+        $post->save();
+
+        $path = $post->id;
+
+        $file_name = $file->store('/tasks/user-'.Auth::user()->id.'/'.$path, 'storage');
+        $path = '/storage/'.$file_name;
+        $post->img = $path;
+        $post->save();
 
         return redirect()->route('main');
     }

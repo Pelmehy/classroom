@@ -1,5 +1,13 @@
 <?php
 
+use App\Http\Controllers\Course;
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\NewStudentsController;
+use App\Http\Controllers\NewTeacherController;
+use App\Http\Controllers\Posts;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RatingController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,74 +21,105 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get(
+    'ajax/groups',
+    [RatingController::class, 'showGroup']
+)->name('showGroups');
+
+Route::get(
+    'ajax/group_table',
+    [RatingController::class, 'showGroupTable']
+)->name('showGroupTable');
+
+
 Route::get('/',
-    [\App\Http\Controllers\Posts::class, 'index']
+    [Posts::class, 'index']
 )->name('main');
+
+Route::post(
+    '/post/add',
+    [Posts::class, 'add']
+)->middleware(['auth'])->name('addPost');
 
 Route::get(
     '/main',
-    [\App\Http\Controllers\Course::class, 'index']
+    [Course::class, 'index']
 )->name('courses');
 
 Route::get(
     'course/add',
-    [\App\Http\Controllers\CourseController::class, 'addForm']
+    [CourseController::class, 'addForm']
 )->middleware(['auth'])->name('add_course_view');
 
 Route::post(
     'course/add/submit',
-    [\App\Http\Controllers\CourseController::class, 'add']
+    [CourseController::class, 'add']
 )->middleware(['auth'])->name('add_course');
 
 Route::get(
     '/course/{course_id}',
-    [\App\Http\Controllers\CourseController::class, 'index']
+    [CourseController::class, 'index']
 )->middleware(['auth'])->name('currentCourse');
 
 Route::get(
     '/task/{course_id}/{task_id}',
-    [\App\Http\Controllers\TaskController::class, 'index']
+    [TaskController::class, 'index']
 )->middleware(['auth'])->name('task');
 
 Route::post(
     '/task/add/homework/{course_id}/{task_id}',
-    [\App\Http\Controllers\TaskController::class, 'addHomework']
+    [TaskController::class, 'addHomework']
 )->middleware(['auth'])->name('addHomework');
 
 Route::post(
     'task/rate/homework/',
-    [\App\Http\Controllers\TaskController::class, 'rateHomework']
+    [TaskController::class, 'rateHomework']
 )->middleware(['auth'])->name('rateHomework');
 
 Route::post(
     '/task/add/{course_id}',
-    [\App\Http\Controllers\TaskController::class, 'add']
+    [TaskController::class, 'add']
 )->middleware(['auth'])->name('addTask');
 
 Route::get(
     '/profile',
-    [\App\Http\Controllers\ProfileController::class, 'index']
+    [ProfileController::class, 'index']
 )->middleware(['auth'])->name('profile');
 
 Route::get(
     '/new_teacher',
-    [\App\Http\Controllers\NewTeacherController::class, 'index']
+    [NewTeacherController::class, 'index']
 )->middleware(['auth'])->name('new_teacher');
 
 Route::post(
     '/new_teacher/add',
-    [\App\Http\Controllers\NewTeacherController::class, 'add']
+    [NewTeacherController::class, 'add']
 )->middleware(['auth'])->name('addTeacher');
 
 Route::get(
     '/new_students',
-    [\App\Http\Controllers\NewStudentsController::class, 'index']
+    [NewStudentsController::class, 'index']
 )->middleware(['auth'])->name('new_students');
 
 Route::post(
     '/add_students',
-        [\App\Http\Controllers\NewStudentsController::class, 'add']
+        [NewStudentsController::class, 'add']
 )->middleware(['auth'])->name('addStudents');
+
+Route::get(
+    '/groups_rating',
+    [RatingController::class, 'groups']
+)->middleware(['auth'])->name('groups_rating');
+
+Route::get(
+    '/rating',
+    [RatingController::class, 'student']
+)->middleware(['auth'])->name('studentRating');
+
+Route::get(
+    '/course_rating/{course_id}',
+    [RatingController::class, 'course']
+)->middleware(['auth'])->name('courseRating');
 
 //Route::post(
 //    '/users_export',

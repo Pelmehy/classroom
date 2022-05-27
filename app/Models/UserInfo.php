@@ -16,7 +16,7 @@ class UserInfo extends Model
 
     }
 
-    public function get($user_id){
+    public static function get($user_id){
         return UserInfo::where('user_id', $user_id)->first();
     }
 }
