@@ -299,6 +299,10 @@ select {
     overflow: auto;
     height: 300px;
 }
+
+.chat-content .content{
+    margin-top: 20px;
+}
 .chatBox .card{
     width: 100%;
     border-radius: 4px;
@@ -367,16 +371,28 @@ select {
 .chat-message-group .chat-thumb{
     float: left;
     width: 10%;
+    margin-left: 3%;
+    margin-top: 2%;
 }
+
+.is-32x32{
+    width: 32px;
+    height: 32px;
+}
+
 .chat-message-group .chat-messages{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     float: left;
     width: 80%;
     margin-bottom: 20px;
 }
 .chat-message-group .message{
+
     float: left;
     padding: 10px;
-    background: #ecf1f8;
+    background: #ccd5f5;
     font-size: 13px;
     border-radius: 5px;
     margin-bottom: 3px;
@@ -385,6 +401,8 @@ select {
     float: left;
     display: block;
     width: 100%;
+    margin-left: 3px;
+
     text-align: left;
     font-size: 11px;
 }
@@ -394,8 +412,10 @@ select {
 .writer-user .chat-messages{
     float: right;
     width: 100%;
+    margin-right: 5px;
 }
 .writer-user .chat-messages .message{
+    align-self: flex-end;
     float: right;
     background: #683db8;
     color: #FFF;

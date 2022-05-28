@@ -30,7 +30,7 @@ class Validation
     public static function isAdmin(){
         $user_role = UserInfo::get_user_role(Auth::user()->id);
         if ($user_role != Config::get('constants.USER_TYPE_ADMIN')){
-            return redirect()->route('main');
+            return false;
         }
 
         return true;
@@ -38,12 +38,13 @@ class Validation
 
     public static function isTeacher(){
         $user_role = UserInfo::get_user_role(Auth::user()->id);
-        if ($user_role != Config::get('constants.USER_TYPE_TEACHER') ||
-            $user_role != Config::get('constants.USER_TYPE_ADMIN'))
+
+        if ($user_role == Config::get('constants.USER_TYPE_TEACHER') ||
+            $user_role == Config::get('constants.USER_TYPE_ADMIN'))
         {
-            return redirect()->route('main');
+            return true;
         }
 
-        return true;
+        return false;
     }
 }

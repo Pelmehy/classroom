@@ -31,6 +31,10 @@ Route::get(
     [RatingController::class, 'showGroupTable']
 )->name('showGroupTable');
 
+Route::get(
+    'ajax/chat',
+    [\App\Http\Controllers\ChatController::class, 'sendMessage']
+)->name('message');
 
 Route::get('/',
     [Posts::class, 'index']
@@ -67,7 +71,7 @@ Route::get(
 )->middleware(['auth'])->name('task');
 
 Route::post(
-    '/task/add/homework/{course_id}/{task_id}',
+    '/task/add/homework/',
     [TaskController::class, 'addHomework']
 )->middleware(['auth'])->name('addHomework');
 

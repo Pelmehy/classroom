@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Middleware\Validation;
+use App\Models\Chat;
 use App\Models\StudentRating;
 use App\Models\UserInfo;
 use App\Models\UserTask;
@@ -26,12 +27,6 @@ class TaskController extends Controller
 
     public function index($course_id, $task_id)
     {
-        $params['course_id'] = $course_id;
-        $params['task_id'] = $task_id;
-        $params['access'] = UserInfo::get_user_role(Auth::user()->id);
-        $params['task'] = Task::where('course_id', $course_id)->where('id', $task_id)->first();
-        $params['error'] = null;
-
         if (!Validation::isTeacher()){
             $user_task = UserTask::get_current_user_task(Auth::user()->id, $task_id);
             if($user_task){
@@ -42,6 +37,14 @@ class TaskController extends Controller
         else{
             $params['user_tasks'] = UserTask::get_homeworks($task_id);
         }
+
+        $params['course_id'] = $course_id;
+        $params['task_id'] = $task_id;
+        $params['access'] = UserInfo::get_user_role(Auth::user()->id);
+        $params['task'] = Task::where('course_id', $course_id)->where('id', $task_id)->first();
+        $params['error'] = null;
+        $params['cur_user_id'] = Auth::user()->id;
+        $params['messages'] = Chat::prepare_chat($task_id);
         return view('task', $params);
     }
 

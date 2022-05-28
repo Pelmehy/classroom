@@ -29,73 +29,9 @@
     <div class="task-elems row ">
         <div class="col-md-6">
             <div id="h-100 p-5 bg-light border rounded-3 ">
-                    <div class="chatBox" id="chatBox">
-                        <div class="card">
-                            <div id="chatbox-area">
-                                <div class="card-content chat-content">
-                                    <div class="content">
-                                        <div class="chat-message-group">
-                                            <div class="chat-thumb">
-                                                <figure class="image is-32x32">
-                                                    <img src="https://k0.okccdn.com/php/load_okc_image.php/images/32x0/971x939/0/10846088441021659030.webp?v=2">
-                                                </figure>
-                                            </div>
-                                            <div class="chat-messages">
-                                                <div class="message">Olá meu nome é Camila</div>
-                                                <div class="from">Hoje 04:55</div>
-                                            </div>
-                                        </div>
-                                        <div class="chat-message-group writer-user">
-                                            <div class="chat-messages">
-                                                <div class="message">Olá meu nome é Marinho</div>
-                                                <div class="from">Hoje 04:55</div>
-                                            </div>
-                                        </div>
-                                        <div class="chat-message-group">
-                                            <div class="chat-thumb">
-                                                <figure class="image is-32x32">
-                                                    <img src="https://k0.okccdn.com/php/load_okc_image.php/images/32x0/971x939/0/10846088441021659030.webp?v=2">
-                                                </figure>
-                                            </div>
-                                            <div class="chat-messages">
-                                                <div class="message">Olá meu nome é Marinho</div>
-                                                <div class="message">Caro marinho</div>
-                                                <div class="from">Hoje 04:55</div>
-                                            </div>
-
-                                        </div>
-                                        <div class="chat-message-group writer-user">
-                                            <div class="chat-messages">
-                                                <div class="message">Olá meu nome é Marinho</div>
-                                                <div class="from">Hoje 04:55</div>
-                                            </div>
-                                        </div>
-                                        <div class="chat-message-group writer-user">
-                                            <div class="chat-messages">
-                                                <div class="message">Olá meu nome é Marinho</div>
-                                                <div class="from">Hoje 04:55</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <footer class="" id="chatBox-textbox">
-                                    <form class="card p-2">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Повідомлення">
-                                            <button type="submit" class="btn btn-outline-success">Відправити</button>
-                                        </div>
-                                    </form>
-                                </footer>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="emojiBox" style="display: none">
-                        <div class="box">
-
-                        </div>
-                    </div>
-
-                </div>
+{{--                @include('ajax.chat')--}}
+                @include('inc.chat')
+            </div>
         </div>
         <div class="col-md-6">
             @if($access == 1)

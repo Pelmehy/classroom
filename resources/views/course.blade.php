@@ -46,4 +46,9 @@
         </div>
     </div>
 
+    @if($access == 1)
+        <script>
+
+        </script>
+    @endif
 @endsection
