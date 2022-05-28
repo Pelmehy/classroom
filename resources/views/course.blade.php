@@ -48,7 +48,67 @@
 
     @if($access == 1)
         <script>
+            $(document).ready(function (){
+                var date = renderCalendar();
+                getDates(date);
 
+                function getDates(date){
+                    let start_date = Date.parse(date.toString()) / 1000
+
+                    let end_date = new Date(
+                        date.getFullYear(),
+                        date.getMonth() + 1,
+                        2
+                    )
+                    end_date = Date.parse(end_date.toString()) / 1000;
+
+                    $.ajax({
+                        url: "{{route('dates')}}",
+                        type: "GET",
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        data: {
+                            start_date: start_date,
+                            end_date: end_date,
+                            course_id: {{$course_id}}
+                        },
+                        success: (data) => {
+                            $.each(data, function(index, end_date) {
+                                let el = $('#' + end_date.end_date)
+                                el.addClass('calendar__date--selected calendar__date--first-date calendar__date--last-date')
+                            });
+                        },
+                    })
+                }
+
+                $('.span').parent().click(
+                    function (){
+                        console.log($(this).attr("class"))
+
+                        if($(this).attr("class") ===
+                            'calendar__date calendar__date--selected calendar__date--first-date calendar__date--last-date')
+                        {
+                            let end_date = $(this).attr('id')
+                            console.log(end_date)
+                            $.ajax({
+                                url: "{{route('getTasksForCourse')}}",
+                                type: "GET",
+                                headers: {
+                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                },
+                                data: {
+                                    end_date: end_date,
+                                    course_id: {{$course_id}}
+                                },
+                                success: (data) => {
+                                    $('#end_tasks').html(data)
+                                },
+                            })
+                        }
+                    }
+                )
+            })
         </script>
     @endif
 @endsection

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/css/index.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/js/date.format.js"></script>
     <script src="/js/my.js"></script>
     <script src="/js/index.js"></script>
 

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CalendarController;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\Course;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\NewStudentsController;
@@ -33,8 +35,18 @@ Route::get(
 
 Route::get(
     'ajax/chat',
-    [\App\Http\Controllers\ChatController::class, 'sendMessage']
+    [ChatController::class, 'sendMessage']
 )->name('message');
+
+Route::get(
+    'ajax/task_dates',
+    [CalendarController::class, 'getDates']
+)->name('dates');
+
+Route::get(
+    'ajax/tasks_for_course',
+    [CalendarController::class, 'getTasksForCourse']
+)->name('getTasksForCourse');
 
 Route::get('/',
     [Posts::class, 'index']

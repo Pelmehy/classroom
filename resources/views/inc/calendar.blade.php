@@ -54,12 +54,12 @@
                 <div class="calendar__date"><span>13</span></div>
                 <div class="calendar__date"><span>14</span></div>
                 <div class="calendar__date"><span>15</span></div>
-                <div class="calendar__date calendar__date--selected calendar__date--first-date calendar__date--range-start"><span>16</span></div>
-                <div class="calendar__date calendar__date--selected calendar__date--last-date"><span>17</span></div>
-                <div class="calendar__date calendar__date--selected calendar__date--first-date"><span>18</span></div>
-                <div class="calendar__date calendar__date--selected"><span>19</span></div>
-                <div class="calendar__date calendar__date--selected calendar__date--last-date"><span>20</span></div>
-                <div class="calendar__date calendar__date--selected calendar__date--range-end"><span>21</span></div>
+                <div class="calendar__date  calendar__date--first-date calendar__date--range-start"><span>16</span></div>
+                <div class="calendar__date  calendar__date--last-date"><span>17</span></div>
+                <div class="calendar__date  calendar__date--first-date"><span>18</span></div>
+                <div class="calendar__date "><span>19</span></div>
+                <div class="calendar__date calendar__date--selected calendar__date--first-date calendar__date--last-date"><span>20</span></div>
+                <div class="calendar__date  calendar__date--range-end"><span>21</span></div>
                 <div class="calendar__date"><span>22</span></div>
                 <div class="calendar__date"><span>23</span></div>
                 <div class="calendar__date"><span>24</span></div>
@@ -72,12 +72,14 @@
                 <div class="calendar__date"><span>31</span></div>
             </div>
         </div>
-        <div class="schedule w-100 text-center">
-            <h4 class="">Немає завдань</h4>
-            <hr>
-        </div>
-        <div class="schedule w-100 col-8">
-            <h4>Завдання 1</h4>
+        <div id="end_tasks">
+            <div class="schedule w-100 text-center">
+                <h4 class="">Немає завдань</h4>
+                <hr>
+            </div>
+            <div class="schedule w-100 col-8">
+                <h5>Завдання 1</h5>
+            </div>
         </div>
     </div>
 

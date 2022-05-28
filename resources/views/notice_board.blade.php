@@ -28,4 +28,13 @@
                         </div>
                     </div>
                 @endforeach
+            </div>
+        </div>
+        @if($access == 1)
+            <script>
+                $(document).ready(function () {
+                    renderCalendar();
+                })
+            </script>
+        @endif
 @endsection

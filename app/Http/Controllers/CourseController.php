@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Middleware\Validation;
 use App\Models\UserInfo;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Models\Task;
@@ -23,6 +24,8 @@ class CourseController extends Controller
 
     public function index($course_id)
     {
+//        $date = Carbon::now();
+//        dd($date->format('y-m-d'));
         $params['access'] = UserInfo::get_user_role(Auth::user()->id);
         $params['course_id'] = $course_id;
         $params['tasks'] = Task::where('course_id', $course_id)->orderBy('end_date')->get();
