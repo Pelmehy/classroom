@@ -14,7 +14,7 @@ class UserTask extends Model
     }
 
     public static function get_homeworks($task_id){
-        $completed = StudentRating::select('id')->get();
+        $completed = StudentRating::select('task_id')->get();
         $tasks = UserTask::where('task_id', $task_id)->whereNotIn('task_id', $completed)->get();
 
         foreach ($tasks as $task){

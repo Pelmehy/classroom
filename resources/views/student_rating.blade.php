@@ -10,7 +10,7 @@
                 <thead>
                 <tr>
                     <th>Курс</th>
-                    <th>Середній рейтинг</th>
+                    <th>Всього балів</th>
                     <th>Викладач</th>
                 </tr>
                 </thead>
@@ -22,7 +22,7 @@
                                 {{$course->name}}
                             </a>
                         </td>
-                        <td>none</td>
+                        <td>{{$course->sum}}</td>
                         <td>{{$course->teacher}}</td>
                     </tr>
                 @endforeach

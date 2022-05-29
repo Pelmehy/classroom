@@ -4,7 +4,6 @@
         <th>Факультет</th>
         <th>Група</th>
         <th>Курс</th>
-        <th>Середній рейтинг</th>
         <th>Викладач</th>
     </tr>
     </thead>
@@ -17,7 +16,6 @@
                 <a href="{{route('currentCourse', $course->id)}}">{{$course->name}}
                 </a>
             </td>
-            <td>none</td>
             <td>{{$course->teacher}}</td>
         </tr>
     @endforeach

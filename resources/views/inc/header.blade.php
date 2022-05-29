@@ -27,20 +27,20 @@
                             <li class="nav-item">
                                 <a class="nav-link active" href="{{route('courses')}}">Курси</a>
                             </li>
-                            @if($access > 1)
+                            @if($access == 2)
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('add_course_view')}}">Додати курс</a>
                             </li>
+                            @endif
+                            @if($access > 1)
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('groups_rating')}}">Групи</a>
                             </li>
-                            @endif
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Календар</a>
-                            </li>
+                            @else
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('studentRating')}}">Поточний контроль</a>
                             </li>
+                            @endif
                             <li class="nav-item">
                                 <form method="POST" action="{{ route('logout') }}">
 

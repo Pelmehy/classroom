@@ -64,6 +64,7 @@ class RatingController extends Controller
 
         foreach ($courses as $course){
             $course->teacher = UserInfo::get($course->teacher_id)->fullName;
+            $course->sum = StudentRating::get_student_sum($student->id, $course->id);
         }
 
         $params['courses'] = $courses;

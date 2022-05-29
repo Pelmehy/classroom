@@ -29,20 +29,6 @@
                     </div>
                 </a>
             @endforeach
-
-            <div class="tasks d-flex text-muted pt-3">
-                <div class="ico flex-shrink-0 me-2"></div>
-                <p class="pb-3 mb-0 small">
-                    Some representative placeholder content, with some information about this user. Imagine this being some sort of status update, perhaps?
-                </p>
-            </div>
-            <div class="tasks d-flex text-muted pt-3">
-                <div class="ico flex-shrink-0 me-2"></div>
-                <p class="pb-3 mb-0 small">
-                    Some representative placeholder content, with some information about this user. Imagine this being some sort of status update, perhaps?
-                </p>
-            </div>
-
         </div>
     </div>
 
@@ -86,8 +72,8 @@
                     function (){
                         console.log($(this).attr("class"))
 
-                        if($(this).attr("class") ===
-                            'calendar__date calendar__date--selected calendar__date--first-date calendar__date--last-date')
+                        if($(this).attr("class") !== 'calendar__date'
+                        )
                         {
                             let end_date = $(this).attr('id')
                             console.log(end_date)
@@ -105,6 +91,14 @@
                                     $('#end_tasks').html(data)
                                 },
                             })
+                        }
+                        else{
+                            let out = `
+                                <div class="schedule w-100 text-center">
+                                    <h4 class="">Немає завдань</h4>
+                                    <hr>
+                                </div>`
+                            $('#end_tasks').html(out)
                         }
                     }
                 )

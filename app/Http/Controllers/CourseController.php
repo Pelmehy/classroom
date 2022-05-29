@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Middleware\Validation;
+use App\Models\Group;
 use App\Models\UserInfo;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -35,13 +36,15 @@ class CourseController extends Controller
     public function addForm(){
         Validation::isTeacher();
 
-        $params['access'] = UserInfo::get_user_role(Auth::user()->id);
-        $params['faculty'] = 1;
+        $user = UserInfo::get(Auth::user()->id);
+        $params['access'] = $user->type;
+        $params['faculty'] = $user->faculty_id;
+        $params['groups'] = Group::get_by_faculty($user->faculty_id);
         return view('new_course', $params);
     }
 
     public function add(Request $request){
-        Validation::is_teacher();
+        Validation::isTeacher();
 
         $course = new Cource();
         $course->teacher_id = Auth::user()->id;

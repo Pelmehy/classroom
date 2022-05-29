@@ -35,6 +35,7 @@
     <script>
         $(document).ready(function (){
             $('.faculty').click(function (){
+                console.log('click!')
                 let faculty_id = $(this).data('faculty')
 
                 $.ajax({

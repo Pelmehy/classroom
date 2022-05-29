@@ -77,9 +77,6 @@
                 <h4 class="">Немає завдань</h4>
                 <hr>
             </div>
-            <div class="schedule w-100 col-8">
-                <h5>Завдання 1</h5>
-            </div>
         </div>
     </div>
 

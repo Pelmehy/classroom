@@ -85,6 +85,7 @@
 
                                         <input type="hidden" name="course_id" value="{{$course_id}}">
                                         <input type="hidden" name="task_id" value="{{$task_id}}">
+                                        <input type="hidden" name="student_id" value="{{$user_task->user->user_id}}">
 
                                         <input type="value" class="form-control" name="rate" placeholder="Оцінка" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
                                         <div class="input-group-append">

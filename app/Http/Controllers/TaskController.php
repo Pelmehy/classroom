@@ -129,7 +129,7 @@ class TaskController extends Controller
         $task_id = $request->input('task_id');
 
         $student_rating = new StudentRating();
-        $student_rating->student_id = Auth::user()->id;
+        $student_rating->student_id = $request->input('student_id');
         $student_rating->course_id = $course_id;
         $student_rating->task_id = $task_id;
         $student_rating->rating = $request->input('rate');

@@ -21,9 +21,9 @@
                                     <div class="col-sm-6">
                                         <label for="firstName" class="form-label">Група</label>
                                         <select class="form-select" name="group">
-                                            <option value="1">g-1</option>
-                                            <option value="2">g-2</option>
-                                            <option value="3">g-3</option>
+                                            @foreach($groups as $group)
+                                                <option value="{{$group->id}}">{{$group->tag}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
 
