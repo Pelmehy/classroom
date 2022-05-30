@@ -13,7 +13,7 @@
             <td>{{$course->faculty}}</td>
             <td>{{$course->group}}</td>
             <td>
-                <a href="{{route('currentCourse', $course->id)}}">{{$course->name}}
+                <a href="{{route('taskRating', [$course->id, $course->group_id])}}">{{$course->name}}
                 </a>
             </td>
             <td>{{$course->teacher}}</td>

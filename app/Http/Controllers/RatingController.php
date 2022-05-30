@@ -6,6 +6,7 @@ use App\Http\Middleware\Validation;
 use App\Models\Cource;
 use App\Models\Faculty;
 use App\Models\Group;
+use App\Models\Student;
 use App\Models\StudentRating;
 use App\Models\Task;
 use App\Models\UserInfo;
@@ -56,6 +57,25 @@ class RatingController extends Controller
         return view('ajax.group_table', $params)->render();
     }
 
+    public function task($course_id, $group_id){
+        Validation::isTeacher();
+
+        $params['students'] = UserInfo::where('group_id', $group_id)->get();
+        $params['course_id'] = $course_id;
+        $params['access'] = UserInfo::get_user_role(Auth::user()->id);
+        return view('task_rating', $params);
+    }
+
+    public function showTaskTable(Request $request){
+        if (!$request->ajax()){
+            return false;
+        }
+
+        $params['tasks'] = Task::get_student_tasks($request->student_id, $request->course_id);
+        $params['course_id'] = $request->course_id;
+        return view('ajax.task_table', $params);
+    }
+
     public function student(){
 
         $student = UserInfo::get(Auth::user()->id);
@@ -73,30 +93,11 @@ class RatingController extends Controller
     }
 
     public function course($course_id){
-        $student = UserInfo::get(Auth::user()->id);
-
-        $tasks = Task::get_by_course($course_id);
-
-        foreach ($tasks as $task){
-            $student_task_rate = StudentRating::get_by_task($student->user_id, $task->id);
-            $student_task_norate = UserTask::get_current_user_task($student->user_id, $task->id);
-
-            if ($student_task_rate){
-                $task->rating = $student_task_rate->rating;
-                $task->type = 'Оцінено';
-            }
-            elseif ($student_task_norate){
-                $task->type = 'Здано';
-            }
-            else {
-                $task->rating = ' ';
-                $task->type = 'Не здано';
-            }
-        }
+        $user_id = Auth::user()->id;
 
         $params['course_id'] = $course_id;
-        $params['tasks'] = $tasks;
-        $params['access'] = $student->type;
+        $params['tasks'] = Task::get_student_tasks($user_id, $course_id);
+        $params['access'] = UserInfo::get_user_role($user_id);
         return view('course_rating', $params);
     }
 }

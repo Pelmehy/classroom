@@ -34,6 +34,11 @@ Route::get(
 )->name('showGroupTable');
 
 Route::get(
+    'ajax/task_table',
+    [RatingController::class, 'showTaskTable']
+)->name('showTaskTable');
+
+Route::get(
     'ajax/chat',
     [ChatController::class, 'sendMessage']
 )->name('message');
@@ -136,6 +141,11 @@ Route::get(
     '/course_rating/{course_id}',
     [RatingController::class, 'course']
 )->middleware(['auth'])->name('courseRating');
+
+Route::get(
+    '/task_rating/{course_id}/{group_id}',
+    [RatingController::class, 'task']
+)->middleware(['auth'])->name('taskRating');
 
 //Route::post(
 //    '/users_export',
