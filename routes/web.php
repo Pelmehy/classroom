@@ -107,6 +107,11 @@ Route::get(
     [ProfileController::class, 'index']
 )->middleware(['auth'])->name('profile');
 
+Route::post(
+    '/profile/add',
+    [ProfileController::class, 'update']
+)->middleware(['auth'])->name('update_profile');
+
 Route::get(
     '/new_teacher',
     [NewTeacherController::class, 'index']

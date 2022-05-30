@@ -26,6 +26,7 @@ class Chat extends Model
             $step = 0;
 
             $messages[$i]->user_name = UserInfo::get($messages[$i]->user_id)->fullName;
+            $messages[$i]->img = UserInfo::get($messages[$i]->user_id)->img;
 
             if ($i < $size - 1) {
                 $date_start = Carbon::createFromTimestamp($messages[$i]->created_at);

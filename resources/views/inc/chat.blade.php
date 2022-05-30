@@ -18,7 +18,11 @@
                             <div class="chat-message-group">
                                 <div class="chat-thumb">
                                     <figure class="image is-32x32">
-                                        <img class="is-32x32" src="{{asset('storage').'/default/a4.ico'}}">
+                                        @if($message->img === ' ')
+                                            <img class="is-32x32" src="{{asset('storage'.'/default/a'.($message->user_id % 12 + 1).'.ico')}}" />
+                                        @else
+                                            <img class="is-32x32" src="{{asset('storage'.$message->img)}}" style="border-radius: 100%" />
+                                        @endif
                                     </figure>
                                 </div>
                                 <div class="chat-messages">
