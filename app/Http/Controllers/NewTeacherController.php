@@ -71,6 +71,7 @@ class NewTeacherController extends Controller
             $user_info->phone = $phone;
             $user_info->type = Config::get('constants.USER_TYPE_TEACHER');
             $user_info->first_login = 1;
+            $user_info->img = ' ';
             $user_info->save();
         }
         else{
@@ -91,6 +92,7 @@ class NewTeacherController extends Controller
             $user_info->phone = $phone;
             $user_info->type = Config::get('constants.USER_TYPE_TEACHER');
             $user_info->first_login = 1;
+            $user_info->img = ' ';
             $user_info->save();
         }
 
