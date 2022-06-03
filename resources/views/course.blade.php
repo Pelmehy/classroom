@@ -7,12 +7,15 @@
 @section('content')
 
     <div class="row g-5">
+{{--        якщо студет - відобразити календарь--}}
+{{--        якщо викладач - відобразити форму додання завдань--}}
         @if($access >= 2)
                 @include('inc.add_task')
         @else
             @include('inc.calendar')
         @endif
         <div class="col-md-7 col-lg-8">
+{{--            будування поточного списку авдань--}}
             @foreach($tasks as $task)
                 <a href="{{route('task', [$course_id, $task->id])}}">
                     <div class="tasks d-flex text-muted pt-3">
@@ -32,10 +35,11 @@
         </div>
     </div>
 
+{{--    скрипти генерування календаря--}}
     @if($access == 1)
         <script>
             $(document).ready(function (){
-                var date = renderCalendar();
+                var date = renderCalendar(); //згенерувати календарь
                 getDates(date);
 
                 function getDates(date){
@@ -48,6 +52,7 @@
                     )
                     end_date = Date.parse(end_date.toString()) / 1000;
 
+                    // запит поточних завдань
                     $.ajax({
                         url: "{{route('dates')}}",
                         type: "GET",
@@ -60,6 +65,7 @@
                             course_id: {{$course_id}}
                         },
                         success: (data) => {
+                            //генерація кінцевих сроків завдань
                             $.each(data, function(index, end_date) {
                                 let el = $('#' + end_date.end_date)
                                 el.addClass('calendar__date--selected calendar__date--first-date calendar__date--last-date')
@@ -68,12 +74,13 @@
                     })
                 }
 
+                // завантажити елемент календаря, на який натиснув користувач
                 $('.span').parent().click(
                     function (){
                         console.log($(this).attr("class"))
 
-                        if($(this).attr("class") !== 'calendar__date'
-                        )
+                        // перевірити наявність завдань з дедлайном у цю дату
+                        if($(this).attr("class") !== 'calendar__date')
                         {
                             let end_date = $(this).attr('id')
                             console.log(end_date)

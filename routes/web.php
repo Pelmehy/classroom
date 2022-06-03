@@ -58,6 +58,11 @@ Route::get('/',
 )->name('main');
 
 Route::post(
+    '/delete/post/{post_id}',
+    [Posts::class, 'delete']
+)->middleware(['auth'])->name('deletePost');
+
+Route::post(
     '/post/add',
     [Posts::class, 'add']
 )->middleware(['auth'])->name('addPost');

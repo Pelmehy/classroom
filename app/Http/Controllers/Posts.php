@@ -61,4 +61,12 @@ class Posts extends Controller
 
         return redirect()->route('main');
     }
+
+    public function delete($post_id){
+        if (!Validation::isAdmin()) return redirect()->route('main');
+        $post = Post::where('id', $post_id)->first();
+        $post->delete();
+
+        return redirect()->route('main');
+    }
 }

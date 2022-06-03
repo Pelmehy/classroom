@@ -36,12 +36,12 @@ const renderCalendar = () => {
 
     let days = "";
 
-    for (let x = firstDayIndex; x > 0; x--) {
+    for (let x = firstDayIndex; x > 0; x--) {   // побудова початку календаря
         days =
         days += `<div id="`+ date.getFullYear() + `-`+ To2(date.getMonth()) + `-`+ To2(x) + `" name="day" class="calendar__date calendar__date--grey"><span class="span">${prevLastDay - x + 1}</span></div>`;
     }
 
-    for (let i = 1; i <= lastDay; i++) {
+    for (let i = 1; i <= lastDay; i++) {    // побудова поточних днів місяця
         if (
             i === new Date().getDate() &&
             date.getMonth() === new Date().getMonth()
@@ -52,7 +52,7 @@ const renderCalendar = () => {
         }
     }
 
-    for (let j = 1; j <= nextDays; j++) {
+    for (let j = 1; j <= nextDays; j++) {   // кінця календаря
         days += `<div id="`+ date.getFullYear() + `-`+ To2(date.getMonth() + 2) + `-`+ To2(j) + `"name="day" class="calendar__date calendar__date--grey"><span class="span">${j}</span></div>`;
         monthDays.innerHTML = days;
     }
@@ -62,7 +62,7 @@ const renderCalendar = () => {
 
 const month = document.getElementById('calendar__month');
 
-month.addEventListener('change', (event) => {
+month.addEventListener('change', (event) => {   // при зміні місяця перебудувати календарь
     date.setMonth(month.value);
     renderCalendar();
 })

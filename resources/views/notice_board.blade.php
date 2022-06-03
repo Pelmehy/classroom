@@ -27,7 +27,10 @@
                             <p class="card-text mb-auto">{{$post->description}}</p>
 
                             @if($access == 3)
-                                <button type="button" class="btn btn-outline-danger">Видалити</button>
+                                <form action="{{route('deletePost', $post->id)}}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="btn btn-outline-danger">Видалити</button>
+                                </form>
                             @endif
                         </div>
                     </div>

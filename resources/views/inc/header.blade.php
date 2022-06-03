@@ -2,6 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Fifth navbar example">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarsExample05">
+{{--                відображати блок якщо користувач авторизован--}}
                 @if (Route::has('login'))
                     @auth
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -11,6 +12,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('main')}}">Дошка оголошень</a>
                             </li>
+{{--                            перевірка типу користувача--}}
                             @if($access > 1)
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('new_students')}}">Нові студенти</a>
@@ -57,6 +59,7 @@
                             </li>
                         </ul>
                     @else
+{{--                    форма входу для неавторизованого користувача--}}
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('main')}}">Дошка оголошень</a>

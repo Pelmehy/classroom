@@ -2,6 +2,7 @@
 <div class="col-md-5 col-lg-4 order-md-last">
     <div class="calendar col-8">
         <div class="calendar__opts">
+{{--            список місяців --}}
             <select name="calendar__month" id="calendar__month" class="w-45p">
                 <option value="0">Січень</option>
                 <option value="1">Лютий</option>
@@ -16,7 +17,7 @@
                 <option value="10">Листопад</option>
                 <option value="11">Грудень</option>
             </select>
-
+{{--список років--}}
             <select name="calendar__year" id="calendar__year" class="w-45p">
                 <option>2021</option>
                 <option selected>2022</option>
@@ -33,7 +34,7 @@
                 <div>Сб</div>
                 <div>Вс</div>
             </div>
-
+{{--список днів--}}
             <div class="calendar__dates">
                 <div class="calendar__date calendar__date--grey"><span>27</span></div>
                 <div class="calendar__date calendar__date--grey"><span>28</span></div>

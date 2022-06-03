@@ -3,7 +3,9 @@
         <div>
             <div id="chatbox-area" class="card-content chat-content">
                 <div class="content">
+{{--                    відображення всіх повідомлень--}}
                     @foreach($messages as $message)
+{{--                        перевірка чи належать повідомлення користувачу--}}
                         @if($message->user_id == Auth::user()->id)
                             <div class="chat-message-group writer-user">
                                 <div class="chat-messages">
@@ -18,6 +20,7 @@
                             <div class="chat-message-group">
                                 <div class="chat-thumb">
                                     <figure class="image is-32x32">
+{{--                                        перевірка чи завантажив користувач власний аватар--}}
                                         @if($message->img === ' ')
                                             <img class="is-32x32" src="{{asset('storage'.'/default/a'.($message->user_id % 12 + 1).'.ico')}}" />
                                         @else
@@ -39,6 +42,7 @@
                     @endforeach
                 </div>
             </div>
+{{--            форма відправки повідомлень--}}
             <footer class="" id="chatBox-textbox">
                 <form class="card p-2">
                     <div class="input-group">
@@ -52,6 +56,7 @@
 </div>
 
 <script>
+    // скрипт завантаження повідомлень користувача
     $(document).ready(function (){
         $('#submit').click(function (){
             let message = $('#message').val()
