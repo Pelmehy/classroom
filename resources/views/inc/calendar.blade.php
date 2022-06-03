@@ -73,12 +73,14 @@
                 <div class="calendar__date"><span>31</span></div>
             </div>
         </div>
+        @if($access == 1)
         <div id="end_tasks">
             <div class="schedule w-100 text-center">
                 <h4 class="">Немає завдань</h4>
                 <hr>
             </div>
         </div>
+        @endif
     </div>
 
     <script src="/js/script.js"></script>

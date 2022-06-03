@@ -4,6 +4,11 @@
 </div>
 <div class="schedule w-100 col-8">
     @foreach($tasks as $task)
-        <h5><b>Завдання:</b> {{$task->name}}</h5>
+            <h5>
+                <a href="{{route('task', [$task->course_id, $task->id])}}">
+                    <b>Завдання:</b>
+                </a>
+                {{$task->name}}
+            </h5>
     @endforeach
 </div>

@@ -99,11 +99,4 @@
             @endif
         </div>
     </div>
-
-    <div class="main-task pb-3 border">
-        <div class="d-grid gap-2" style="grid-template-columns: 2fr 2fr;">
-
-
-        </div>
-    </div>
 @endsection

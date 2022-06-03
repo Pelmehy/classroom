@@ -39,8 +39,17 @@
     @if($access == 1)
         <script>
             $(document).ready(function (){
-                var date = renderCalendar(); //згенерувати календарь
+                let date = new Date();
+
+                date = renderCalendar(date); //згенерувати календарь
                 getDates(date);
+
+                $('#calendar__month').change(function (){
+                    date.setMonth($(this).val())
+                    console.log(date)
+                    renderCalendar(date)
+                    getDates(date);
+                })
 
                 function getDates(date){
                     let start_date = Date.parse(date.toString()) / 1000
@@ -72,43 +81,44 @@
                             });
                         },
                     })
+
+                    let span = $('.span').parent()
+
+                    // завантажити елемент календаря, на який натиснув користувач
+                    span.click(
+                        function (){
+                            console.log($(this).attr("class"))
+
+                            // перевірити наявність завдань з дедлайном у цю дату
+                            if($(this).attr("class") !== 'calendar__date')
+                            {
+                                let end_date = $(this).attr('id')
+                                console.log(end_date)
+                                $.ajax({
+                                    url: "{{route('getAllTasks')}}",
+                                    type: "GET",
+                                    headers: {
+                                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                    },
+                                    data: {
+                                        end_date: end_date,
+                                    },
+                                    success: (data) => {
+                                        $('#end_tasks').html(data)
+                                    },
+                                })
+                            }
+                            else{
+                                let out = `
+                            <div class="schedule w-100 text-center">
+                                <h4 class="">Немає завдань</h4>
+                                <hr>
+                            </div>`
+                                $('#end_tasks').html(out)
+                            }
+                        }
+                    )
                 }
-
-                // завантажити елемент календаря, на який натиснув користувач
-                $('.span').parent().click(
-                    function (){
-                        console.log($(this).attr("class"))
-
-                        // перевірити наявність завдань з дедлайном у цю дату
-                        if($(this).attr("class") !== 'calendar__date')
-                        {
-                            let end_date = $(this).attr('id')
-                            console.log(end_date)
-                            $.ajax({
-                                url: "{{route('getTasksForCourse')}}",
-                                type: "GET",
-                                headers: {
-                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                                },
-                                data: {
-                                    end_date: end_date,
-                                    course_id: {{$course_id}}
-                                },
-                                success: (data) => {
-                                    $('#end_tasks').html(data)
-                                },
-                            })
-                        }
-                        else{
-                            let out = `
-                                <div class="schedule w-100 text-center">
-                                    <h4 class="">Немає завдань</h4>
-                                    <hr>
-                                </div>`
-                            $('#end_tasks').html(out)
-                        }
-                    }
-                )
             })
         </script>
     @endif

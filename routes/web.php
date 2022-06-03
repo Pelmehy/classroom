@@ -53,6 +53,16 @@ Route::get(
     [CalendarController::class, 'getTasksForCourse']
 )->name('getTasksForCourse');
 
+Route::get(
+    'ajax/all_task_dates',
+    [CalendarController::class, 'getAllDates']
+)->name('allDates');
+
+Route::get(
+    'ajax/tasks_for_courses',
+    [CalendarController::class, 'getAllTasks']
+)->name('getAllTasks');
+
 Route::get('/',
     [Posts::class, 'index']
 )->name('main');

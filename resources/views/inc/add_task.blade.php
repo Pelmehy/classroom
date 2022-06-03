@@ -17,7 +17,7 @@
             <input type="text" class="form-control" name="name" placeholder="" value="" required="">
 
             <label for="lastName" class="form-label">Опис</label>
-            <textarea name="description" class="form-control" aria-label="With textarea"></textarea>
+            <textarea name="description" class="form-control" style="height: 150px" aria-label="With textarea"></textarea>
 
             <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
                 <button class="w-100 btn btn-dark btn-lg" type="submit">Додати</button>

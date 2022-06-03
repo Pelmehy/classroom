@@ -1,10 +1,10 @@
-const date = new Date();
+const date1 = new Date();
 
 function To2(val) {
     return (val<10 ? "0"+val : val);
 }
 
-const renderCalendar = () => {
+const renderCalendar = (date) => {
 
     date.setDate(1);
 
@@ -62,8 +62,8 @@ const renderCalendar = () => {
 
 const month = document.getElementById('calendar__month');
 
-month.addEventListener('change', (event) => {   // при зміні місяця перебудувати календарь
-    date.setMonth(month.value);
-    renderCalendar();
-})
+// month.addEventListener('change', (event) => {   // при зміні місяця перебудувати календарь
+//     date.setMonth(month.value);
+//     renderCalendar();
+// })
 

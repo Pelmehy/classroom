@@ -664,8 +664,8 @@ hr .new1 {
     background: #C4C4C4;
     border-radius: 5px;
 
-    max-width: 450px;
-    height: 800px;
+    max-width: 400px;
+    height: 600px;
 }
 
 .post-img{
@@ -677,7 +677,7 @@ hr .new1 {
     gap: 10px;
 
     width: 450px;
-    height: 250px;
+    height: 150px;
 
     background: #F8F8F8;
     border-radius: 10px 10px 0px 0px;
@@ -697,8 +697,8 @@ hr .new1 {
 }
 
 .input__file-icon {
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
 }
 
 .input__file-button {
@@ -712,5 +712,5 @@ hr .new1 {
 }
 
 .post-description textarea.form-control{
-    height: 300px;
+    height: 200px;
 }
