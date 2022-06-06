@@ -53,5 +53,7 @@ function form_gen(count){
         `;
     }
 
+    $('#form-btn').removeClass('hidden')
+
     form.innerHTML = student_form;
 }

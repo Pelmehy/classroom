@@ -11,6 +11,10 @@ center{
     text-align: center;
 }
 
+.hidden{
+    opacity: 0;
+}
+
 .tasks{
     width: 100%;
     max-height: 80px;

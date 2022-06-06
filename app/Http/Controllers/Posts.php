@@ -39,7 +39,7 @@ class Posts extends Controller
         Validation::isAdmin();
 
         $file = $request->file('file');
-
+//        dd($request);
         if (!$file){
             $params['access'] = UserInfo::get_user_role(Auth::user()->id);
             $params['error'] = 'Файл не додан';

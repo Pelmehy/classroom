@@ -18,9 +18,10 @@
                             <img src="{{asset('storage'.$user_info->img)}}" height="100" width="100" style="border-radius: 100%" />
                             @endif
                             <span class="name mt-3 ml-5">{{$user->name}}</span>
-                            <span class="idd">Студент</span>
-                            <span class="idd">ТР-82</span>
                             <span class="idd">{{$user_info->type}}</span>
+                            @if($access == 1)
+                            <span class="idd">{{$user_info->group}}</span>
+                            @endif
                         </div>
                     </div>
                 </div>

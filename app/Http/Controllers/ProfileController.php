@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Group;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -24,10 +25,24 @@ class ProfileController extends Controller
     public function index()
     {
         $user_id = Auth::user()->id;
+        $user_info = UserInfo::where('user_id', $user_id)->first();
+        switch ($user_info->type){
+            case 1:
+                $user_info->type = 'студент';
+                $user_info->group = Group::get_by_id($user_info->group_id);
+                break;
+            case 2:
+                $user_info->type = 'викладач';
+                break;
+            case 3:
+                $user_info->type = 'адмін';
+                break;
+        }
+
 
         $params['access'] = UserInfo::get_user_role(Auth::user()->id);
         $params['user'] = Auth::user();
-        $params['user_info'] = UserInfo::where('user_id', $user_id)->first();
+        $params['user_info'] = $user_info;
         $params['error'] = null;
         return view('profile', $params);
     }

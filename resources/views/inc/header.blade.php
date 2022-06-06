@@ -66,7 +66,7 @@
                             </li>
                         </ul>
                         <ul class="navbar-nav me-left mb-2 mb-lg-0">
-                            <li class="hidden nav-item">
+                            <li class="nav-item">
                                 <a href="{{ route('login') }}" class="nav-link">Вхід</a>
                             </li>
                         </ul>

@@ -40,7 +40,7 @@
                     <script src="/js/students.js"></script>
                 </div>
 
-                <div class="add_students">
+                <div class="add_students hidden" id="form-btn">
                     <button type="submit" class="btn btn-success std-btn">Підтвердити</button>
                     <button type="button" id="get_pass" class="btn btn-success std-btn">Генерувати паролі</button>
                 </div>

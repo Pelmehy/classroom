@@ -51,6 +51,7 @@ class CreateAdminCommand extends Command
         $user_info->phone = 0;
         $user_info->type = Config::get('constants.USER_TYPE_ADMIN');
         $user_info->first_login = 1;
+        $user_info->img = ' ';
         $user_info->save();
 
         $this->info('Email: '.$user->email.' Password: '.$password);
