@@ -21,9 +21,9 @@
                     <div class="tasks d-flex text-muted pt-3">
                         <div class="ico flex-shrink-0 me-2">
                             @if($task->type == 0)
-                                <img src="{{asset('storage')}}./default/text.ico" alt="">
+                                <img src="{{asset('storage')}}/default/text.ico" alt="">
                             @else
-                                <img src="{{asset('storage')}}./default/file.ico" alt="">
+                                <img src="{{asset('storage')}}/default/file.ico" alt="">
                             @endif
                         </div>
                         <p class="pb-3 mb-0 small">
