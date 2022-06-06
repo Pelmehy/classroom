@@ -39,7 +39,7 @@ class Posts extends Controller
         Validation::isAdmin();
 
         $file = $request->file('file');
-//        dd($request);
+//        dd($request, $file);
         if (!$file){
             $params['access'] = UserInfo::get_user_role(Auth::user()->id);
             $params['error'] = 'Файл не додан';
@@ -54,7 +54,7 @@ class Posts extends Controller
 
         $path = $post->id;
 
-        $file_name = $file->store('/tasks/user-'.Auth::user()->id.'/'.$path, 'storage');
+        $file_name = $file->store('/posts/admin-'.Auth::user()->id.'/'.$path, 'storage');
         $path = '/storage/'.$file_name;
         $post->img = $path;
         $post->save();
