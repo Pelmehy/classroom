@@ -50,7 +50,7 @@ class ProfileController extends Controller
     public function update(Request $request){
         $user_id = Auth::user()->id;
         $user = User::where('id', $user_id)->first();
-        $user_info = UserInfo::get($user_id)->first();
+        $user_info = UserInfo::where('id', $user_id)->first();
 
         $file = $request->file('file');
         if ($file) {
