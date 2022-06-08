@@ -568,7 +568,8 @@ select {
 
 .name {
     font-size: 22px;
-    font-weight: bold
+    font-weight: bold;
+    text-align: center;
 }
 
 .idd {

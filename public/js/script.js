@@ -23,14 +23,14 @@ const renderCalendar = (date) => {
     ).getDate();
 
     const firstDayIndex = (date.getDay() + 6) % 7;
-
     const lastDayIndex = new Date(
         date.getFullYear(),
         date.getMonth() + 1,
         0
     ).getDay();
 
-    const nextDays = 7 - lastDayIndex - 1;
+    let nextDays = 0;
+    if (lastDayIndex) nextDays = 7 - lastDayIndex;
 
     document.getElementById("calendar__month").value = date.getMonth();
 
@@ -51,12 +51,12 @@ const renderCalendar = (date) => {
             days += `<div id="`+ date.getFullYear() + `-`+ To2(date.getMonth() + 1) + `-`+ To2(i) + `"name="day" class="calendar__date"><span class="span">${i}</span></div>`;
         }
     }
-
+    // console.log(days);
     for (let j = 1; j <= nextDays; j++) {   // кінця календаря
         days += `<div id="`+ date.getFullYear() + `-`+ To2(date.getMonth() + 2) + `-`+ To2(j) + `"name="day" class="calendar__date calendar__date--grey"><span class="span">${j}</span></div>`;
-        monthDays.innerHTML = days;
     }
 
+    monthDays.innerHTML = days;
     return date;
 };
 
