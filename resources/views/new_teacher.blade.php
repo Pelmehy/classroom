@@ -39,7 +39,7 @@
                 <div class="row g-3">
                     <div class="col-sm-12">
                         <label for="lastName" class="form-label">ТЕЛЕФОН</label>
-                        <input type="text" class="form-control" name="phone" placeholder="0999999999" value="" required="">
+                        <input type="text" class="form-control" name="phone" placeholder="0999999999" pattern="\[0-9]{9}" value="" required="">
                     </div>
 
                     <div class="col-12">

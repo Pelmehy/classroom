@@ -38,7 +38,7 @@ class NewTeacherController extends Controller
     public function add(Request $request){
         Validation::isTeacher();
 
-        $faculty = $request->input('faculty');
+        $faculty = mb_strtoupper($request->input('faculty'));
         $faculty_id = 0;
 
         if(Faculty::where('name', $faculty)->exists()) $faculty_id = Faculty::where('name', $faculty)->first()->id;

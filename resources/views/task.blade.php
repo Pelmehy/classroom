@@ -51,7 +51,7 @@
                         <div class="form-group border rounded">
                             <label for="exampleFormControlFile1">Додати файл</label>
                             <br>
-                            <input type="file" name="file" class="form-control-file" id="exampleFormControlFile1">
+                            <input type="file" name="file" class="form-control-file" id="exampleFormControlFile1" required>
                         </div>
                         @if($error)
                             <div class="alert alert-danger" role="alert">

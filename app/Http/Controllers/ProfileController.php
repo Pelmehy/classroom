@@ -29,7 +29,7 @@ class ProfileController extends Controller
         switch ($user_info->type){
             case 1:
                 $user_info->type = 'студент';
-                $user_info->group = Group::get_by_id($user_info->group_id);
+                $user_info->group = Group::get_by_id($user_info->group_id)->tag;
                 break;
             case 2:
                 $user_info->type = 'викладач';

@@ -43,9 +43,9 @@ class NewStudentsController extends Controller
         $count = $request->input('val');
         $temp = [];
 
-        $faculty = $request->input('faculty');
+        $faculty = mb_strtoupper($request->input('faculty'));
         $faculty_id = 0;
-        $group = $request->input('group');
+        $group = mb_strtoupper($request->input('group'));
         $group_id = 0;
 
         if(Faculty::where('name', $faculty)->exists()) $faculty_id = Faculty::where('name', $faculty)->first()->id;
@@ -54,6 +54,7 @@ class NewStudentsController extends Controller
             $newFaculty->name = $faculty;
             $newFaculty->deanName = 'ff';
             $newFaculty->save();
+
             $faculty_id = $newFaculty->id;
         }
 
@@ -63,6 +64,8 @@ class NewStudentsController extends Controller
             $newGroup->tag = $group;
             $newGroup->faculty_id = $faculty_id;
             $newGroup->save();
+
+            $group_id = $newGroup->id;
         }
 
         for ($i = 0; $i < $count; $i++){
